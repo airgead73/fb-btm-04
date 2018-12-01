@@ -5,9 +5,9 @@ class Credits extends Component {
       super(props);
     }
     componentDidMount() {
-      document.body.setAttribute("id", "Credits");
-      document.title = "Credits";
-      this.props.pageChange("Credits");
+      document.body.setAttribute("id", "credits");
+      document.title = "credits";
+      this.props.pageChange("credits");
     }
     render() {
   

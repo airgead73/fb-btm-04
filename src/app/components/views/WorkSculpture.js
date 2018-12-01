@@ -5,9 +5,9 @@ class WorkSculpture extends Component {
       super(props);
     }
     componentDidMount() {
-      document.body.setAttribute("id", "WorkSculpture");
-      document.title = "WorkSculpture";
-      this.props.pageChange("WorkSculpture");
+      document.body.setAttribute("id", "workSculpture");
+      document.title = "work | sculpture";
+      this.props.pageChange("workSculpture");
     }
     render() {
   

@@ -2,6 +2,11 @@ import React, { Component } from 'react';
 import { render } from 'react-dom';
 import { Router, Link, Match } from '@reach/router';
 
+// nav
+
+import Nav from './components/nav/Nav';
+import NavFooter from './components/nav/NavFooter';
+
 // views
 
 import Home from './components/views/Home';
@@ -15,37 +20,6 @@ import Drawing from './components/views/WorkDrawing';
 import Contact from './components/views/Contact';
 import Terms from './components/views/Terms';
 import Credits from './components/views/Credits';
-
-//import ScriptTest from '../scripts/ScriptTest.js';
-
-const NavLink = props => (
-  <Link
-    {...props}
-    getProps={({ isCurrent }) => {
-        return {
-          className: isCurrent ? "active" : null
-      };
-    }}
-  />
-);
-
-class Nav extends Component {
-  constructor(props) {
-    super(props);
-  }
-  render() {
-    return (
-      <nav className={this.props.page}>
-      <NavLink to="/">home</NavLink>{' '}
-      <NavLink to="work">work</NavLink>{' '}
-      <NavLink to="about">about</NavLink>{' '}
-      <NavLink to="contact">contact</NavLink>{' '}
-      <NavLink to="terms">terms</NavLink>{' '}
-      <NavLink to="credits">credits</NavLink>
-    </nav>
-    );
-  }
-}
 
 class App extends Component {
   constructor(props) {
@@ -79,9 +53,9 @@ class App extends Component {
           <About path="about" pageChange={this.changePage}/>
           <Contact path="contact" pageChange={this.changePage}/>
           <Terms path="terms" pageChange={this.changePage}/>
-          <Credits path="credits" pageChange={this.changePage}/>
-          
+          <Credits path="credits" pageChange={this.changePage}/>          
         </Router>
+        <NavFooter page={this.state.page}/>
       </div>
 
     );

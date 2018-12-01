@@ -5,9 +5,9 @@ class WorkHome extends Component {
       super(props);
     }
     componentDidMount() {
-      document.body.setAttribute("id", "WorkHome");
-      document.title = "WorkHome";
-      this.props.pageChange("WorkHome");
+      document.body.setAttribute("id", "workHome");
+      document.title = "work home";
+      this.props.pageChange("workHome");
     }
     render() {
   

@@ -5,9 +5,9 @@ class WorkPainting extends Component {
       super(props);
     }
     componentDidMount() {
-      document.body.setAttribute("id", "WorkPainting");
-      document.title = "WorkPainting";
-      this.props.pageChange("WorkPainting");
+      document.body.setAttribute("id", "workPainting");
+      document.title = "work | painting";
+      this.props.pageChange("workPainting");
     }
     render() {
   

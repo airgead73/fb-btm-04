@@ -5,9 +5,9 @@ class WorkAll extends Component {
       super(props);
     }
     componentDidMount() {
-      document.body.setAttribute("id", "WorkAll");
-      document.title = "WorkAll";
-      this.props.pageChange("WorkAll");
+      document.body.setAttribute("id", "workAll");
+      document.title = "work | all";
+      this.props.pageChange("workAll");
     }
     render() {
   

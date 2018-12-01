@@ -5,8 +5,8 @@ class WorkDrawing extends Component {
       super(props);
     }
     componentDidMount() {
-      document.body.setAttribute("id", "WorkDrawing");
-      document.title = "WorkDrawing";
+      document.body.setAttribute("id", "workDrawing");
+      document.title = "work | drawing";
       this.props.pageChange("WorkDrawing");
     }
     render() {
