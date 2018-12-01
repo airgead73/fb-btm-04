@@ -1,26 +1,23 @@
 import React, { Component } from 'react';
-import Main from '../blocks/Main';
 
 class Home extends Component {
-  constructor(props) {
-    super(props);
+    constructor(props) {
+      super(props);
+    }
+    componentDidMount() {
+      document.body.setAttribute("id", "home");
+      document.title = "home";
+      this.props.pageChange("home");
+    }
+    render() {
+  
+      return (
+        <div>
+          <h2>Home - {this.props.path}</h2>
+          <p>paragraph</p>
+        </div>
+      );
+    }
   }
-  componentDidMount() {
-    document.body.setAttribute("id", "bodyHome");
-    document.title = "home";
-    this.setState({page: "home"});
-  }
 
-  render() {
-    return (
-
-      <Main page="Home">
-        <h1>Home</h1>
-
-      </Main>
-
-    );
-  }
-}
-
-export default Home;
+  export default Home;

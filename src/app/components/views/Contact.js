@@ -1,23 +1,23 @@
 import React, { Component } from 'react';
-import Main from '../blocks/Main';
-
-import ScriptTest from '../../../scripts/ScriptTest.js';
 
 class Contact extends Component {
-  componentDidMount() {
-    document.body.setAttribute("id", "bodyContact");
-    document.title = "contact";
-    ScriptTest("contact");
+    constructor(props) {
+      super(props);
+    }
+    componentDidMount() {
+      document.body.setAttribute("id", "contact");
+      document.title = "contact";
+      this.props.pageChange("contact");
+    }
+    render() {
+  
+      return (
+        <div>
+          <h2>Contact - {this.props.path}</h2>
+          <p>paragraph</p>
+        </div>
+      );
+    }
   }
-  render() {
-    return (
 
-      <Main page="Contact">
-        <h1>Contact</h1>
-      </Main>
-
-    );
-  }
-}
-
-export default Contact;
+  export default Contact;

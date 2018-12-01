@@ -1,23 +1,23 @@
 import React, { Component } from 'react';
 
-class Terms extends Component {
+class WorkAll extends Component {
     constructor(props) {
       super(props);
     }
     componentDidMount() {
-      document.body.setAttribute("id", "Terms");
-      document.title = "Terms";
-      this.props.pageChange("Terms");
+      document.body.setAttribute("id", "WorkAll");
+      document.title = "WorkAll";
+      this.props.pageChange("WorkAll");
     }
     render() {
   
       return (
         <div>
-          <h2>Terms - {this.props.path}</h2>
+          <h2>WorkAll - {this.props.path}</h2>
           <p>paragraph</p>
         </div>
       );
     }
   }
 
-  export default Terms;
+  export default WorkAll;

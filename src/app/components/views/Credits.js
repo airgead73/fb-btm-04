@@ -1,23 +1,23 @@
 import React, { Component } from 'react';
-import Main from '../blocks/Main';
-
-import ScriptTest from '../../../scripts/ScriptTest.js';
 
 class Credits extends Component {
-  componentDidMount() {
-    document.body.setAttribute("id", "bodyCredits");
-    document.title = "credits";
-    ScriptTest("credits");
+    constructor(props) {
+      super(props);
+    }
+    componentDidMount() {
+      document.body.setAttribute("id", "Credits");
+      document.title = "Credits";
+      this.props.pageChange("Credits");
+    }
+    render() {
+  
+      return (
+        <div>
+          <h2>Credits - {this.props.path}</h2>
+          <p>paragraph</p>
+        </div>
+      );
+    }
   }
-  render() {
-    return (
 
-      <Main page="Credits">
-        <h1>Credits</h1>
-      </Main>
-
-    );
-  }
-}
-
-export default Credits;
+  export default Credits;

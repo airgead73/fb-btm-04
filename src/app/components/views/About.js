@@ -1,21 +1,23 @@
 import React, { Component } from 'react';
-import Main from '../blocks/Main';
 
 class About extends Component {
-  componentDidMount() {
-    document.body.setAttribute("id", "bodyAbout");
-    document.title = this.props.message;
+    constructor(props) {
+      super(props);
+    }
+    componentDidMount() {
+      document.body.setAttribute("id", "about");
+      document.title = "about";
+      this.props.pageChange("about");
+    }
+    render() {
+  
+      return (
+        <div>
+          <h2>About - {this.props.path}</h2>
+          <p>paragraph</p>
+        </div>
+      );
+    }
   }
-  render() {
-    return (
 
-      <Main page="About">
-          <h1>About</h1>
-          {this.props.message}
-      </Main>
-
-    );
-  }
-}
-
-export default About;
+  export default About;
