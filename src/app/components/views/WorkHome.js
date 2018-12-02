@@ -10,7 +10,7 @@ class WorkHome extends Component {
   
       return (
         <div>
-          <h2>WorkHome - {this.props.path}</h2>
+          <h1>{this.props.title}</h1>
         </div>
       );
     }
