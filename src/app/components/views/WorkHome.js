@@ -10,7 +10,10 @@ class WorkHome extends Component {
   
       return (
         <div>
-          <h1>{this.props.title}</h1>
+          {this.props.page !=="all" || this.props.page !=="sculpture" ||this.props.page !=="painting" || this.props.page !=="drawing" && (
+            <h1>{this.props.title}</h1>
+          )}
+          
         </div>
       );
     }

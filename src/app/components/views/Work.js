@@ -11,7 +11,11 @@ class Work extends Component {
   
       return (
         <div>
-          <h1>{this.props.page}</h1>
+
+          {this.props.page === "work" && (
+            <h1>{this.props.page}</h1>
+          )}
+          
           <NavWork page={this.props.page}/>
           {this.props.children}
         </div>

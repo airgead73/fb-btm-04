@@ -51,7 +51,7 @@ class App extends Component {
             <Home 
               path="/" 
               pageChange={this.changePage}
-              title="home"
+              title="brian moneypenny"
               id="bodyHome"
               className="home"
               />
@@ -59,14 +59,14 @@ class App extends Component {
               path="work" 
               page={this.state.page} 
               pageChange={this.changePage}
-              title="work"
+              title="brian's work"
               id="bodyWork"
               className="work"
               >
                 <WorkHome path="/" 
                   page={this.state.page} 
                   pageChange={this.changePage}
-                  title="work"
+                  title="brian's work"
                   id="bodyWorkHome"
                   className="work"
                   />
@@ -74,7 +74,7 @@ class App extends Component {
                   path="all" 
                   page={this.state.page} 
                   pageChange={this.changePage}
-                  title="work | all"
+                  title="brian's work | all"
                   id="bodyWorkAll"
                   className="workAll"
                   />
@@ -82,7 +82,7 @@ class App extends Component {
                   path="sculpture" 
                   page={this.state.page} 
                   pageChange={this.changePage}
-                  title="work | sculpture"
+                  title="brian's work | sculpture"
                   id="bodyWorkSculpture"
                   className="workSculpture"
                   />
@@ -90,7 +90,7 @@ class App extends Component {
                   path="painting" 
                   page={this.state.page} 
                   pageChange={this.changePage}
-                  title="work | painting"
+                  title="brian's work | painting"
                   id="bodyWorkPainting"
                   className="workPainting"
                   />
@@ -98,7 +98,7 @@ class App extends Component {
                 path="drawing" 
                 page={this.state.page} 
                 pageChange={this.changePage}
-                title="work | drawing"
+                title="brian's work | drawing"
                 id="bodyWorkDrawing"
                 className="workDrawing"
                 />
@@ -106,21 +106,21 @@ class App extends Component {
             <About 
               path="about" 
               pageChange={this.changePage}
-              title="about"
+              title="about brian"
               id="bodyAbout"
               className="about"
               />
             <Contact 
               path="contact" 
               pageChange={this.changePage}
-              title="contact"
+              title="contact brian"
               id="bodyContact"
               className="contact"
               />
             <Terms 
               path="terms" 
               pageChange={this.changePage}
-              title="terms"
+              title="terms and conditions"
               id="bodyTerms"
               />
             <Credits 

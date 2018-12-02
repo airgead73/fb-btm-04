@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import { Column, Row } from '../grid';
+import BMGallery from '../gallery/BMGallery';
+import models from '../../../db/models';
 
 class WorkPainting extends Component {
     componentDidMount() {
@@ -9,9 +12,14 @@ class WorkPainting extends Component {
     render() {
   
       return (
-        <div>
-          <h1>{this.props.path}</h1>
-        </div>
+        <Row>
+          <Column size="12 md-2">
+            <h1>{this.props.page}</h1>
+          </Column>
+          <Column size="12 md-10">
+            <BMGallery photos={models.getForm('drawing')} direction={"row"}/>
+          </Column>
+        </Row>
       );
     }
   }

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Row, Column } from '../grid';
 
 class Contact extends Component {
     componentDidMount() {
@@ -9,9 +10,20 @@ class Contact extends Component {
     render() {
   
       return (
-        <div>
+        <Row>
+          <Column size="12 sm-6">
+          <img className="img-fluid" alt="brian" src="https://res.cloudinary.com/dpm/image/upload/v1532885001/bmoneypenny/work/bm-45.jpg"/>
+
+          </Column>
+          <Column size="12 sm-6">
           <h1>{this.props.title}</h1>
-        </div>
+
+            <p>Seaside, CA</p>
+
+       
+
+          </Column>
+        </Row>
       );
     }
   }
