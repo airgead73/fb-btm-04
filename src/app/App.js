@@ -3,8 +3,11 @@ import { Router } from '@reach/router';
 
 // nav
 
-import Nav from './components/navigation/Nav';
-import NavFooter from './components/navigation/NavFooter';
+//import Nav from './components/navigation/Nav';
+//import NavFooter from './components/navigation/NavFooter';
+import Header from './components/blocks/Header';
+import Footer from './components/blocks/Footer';
+import Main from './components/blocks/Main';
 
 // views
 
@@ -26,8 +29,7 @@ class App extends Component {
     this.state = {
       page: "app"
     };
-    this.changePage = this.changePage.bind(this);
-  
+    this.changePage = this.changePage.bind(this);  
   }
 
   changePage(newPage) {
@@ -39,7 +41,9 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Nav page={this.state.page}/>
+        
+        <Header page={this.state.page}/>
+        <Main page={this.state.page}>
         <Router>
           <Home 
             path="/" 
@@ -123,7 +127,8 @@ class App extends Component {
             id="bodyCredits"
             />                  
         </Router>
-        <NavFooter page={this.state.page}/> 
+        </Main>
+        <Footer page={this.state.page}/> 
         
       </div>
 

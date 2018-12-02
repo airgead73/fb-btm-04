@@ -1,9 +1,10 @@
 import React from 'react';
 
-const Main = ({ page, children }) =>
+export default props => {
 
-<main id={`main${page}`}>
-  {children}
-</main>;
+    return (
+     
+          <main className={props.page}>{props.children}</main>
 
-export default Main;
+    );
+}

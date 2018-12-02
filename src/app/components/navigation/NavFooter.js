@@ -2,6 +2,7 @@ import React from 'react';
 import NavLink from './NavLink';
 
 export default props => {
+
     return (
      
           <nav className={`footer_${props.page}`}>
@@ -10,7 +11,7 @@ export default props => {
           </nav>
 
     );
-  }
+}
 
 
 
