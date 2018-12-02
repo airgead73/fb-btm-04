@@ -11,7 +11,7 @@ class Home extends Component {
       return (
         <div>
           <h2>Home - {this.props.path}</h2>
-          <p>paragraph</p>
+          <p>master branch</p>
         </div>
       );
     }
