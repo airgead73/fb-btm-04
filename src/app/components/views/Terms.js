@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 
 class Terms extends Component {
-    constructor(props) {
-      super(props);
-    }
     componentDidMount() {
       document.body.setAttribute("id", "Terms");
       document.title = "Terms";

@@ -1,14 +1,7 @@
 import React, { Component } from 'react';
 
 class WorkSculpture extends Component {
-    constructor(props) {
-      super(props);
-    }
-    componentDidMount() {
-      document.body.setAttribute("id", "workSculpture");
-      document.title = "work | sculpture";
-      this.props.pageChange("workSculpture");
-    }
+
     render() {
   
       return (
@@ -20,6 +13,4 @@ class WorkSculpture extends Component {
     }
   }
   
-  
-
   export default WorkSculpture;

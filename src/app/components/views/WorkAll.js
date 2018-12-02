@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 
 class WorkAll extends Component {
-    constructor(props) {
-      super(props);
-    }
     componentDidMount() {
       document.body.setAttribute("id", "workAll");
       document.title = "work | all";

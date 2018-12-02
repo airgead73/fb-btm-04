@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
-import { render } from 'react-dom';
-import { Router, Link, Match } from '@reach/router';
+import { Router } from '@reach/router';
 
 // nav
 
-import Nav from './components/nav/Nav';
-import NavFooter from './components/nav/NavFooter';
+import Nav from './components/navigation/Nav';
+import NavFooter from './components/navigation/NavFooter';
 
 // views
 
@@ -28,7 +27,7 @@ class App extends Component {
       page: "app"
     };
     this.changePage = this.changePage.bind(this);
-
+  
   }
 
   changePage(newPage) {
@@ -36,26 +35,61 @@ class App extends Component {
       page: newPage
     });
   }
-
+ 
   render() {
     return (
       <div>
         <Nav page={this.state.page}/>
         <Router>
           <Home path="/" pageChange={this.changePage}/>
-          <Work path="work" page={this.state.page} pageChange={this.changePage}>
-            <WorkHome path="/" page={this.state.page} pageChange={this.changePage}/>
-            <All path="all" page={this.state.page} pageChange={this.changePage}/>
-            <Sculpture path="sculpture" page={this.state.page} pageChange={this.changePage}/>
-            <Painting path="painting" page={this.state.page} pageChange={this.changePage}/>
-            <Drawing path="drawing" page={this.state.page} pageChange={this.changePage}/>
+          <Work path="work" 
+            page={this.state.page} 
+            pageChange={this.changePage}
+            >
+              <WorkHome path="/" 
+                page={this.state.page} 
+                pageChange={this.changePage}
+                />
+              <All 
+                path="all" 
+                page={this.state.page} 
+                pageChange={this.changePage}
+                />
+              <Sculpture 
+                path="sculpture" 
+                page={this.state.page} 
+                pageChange={this.changePage}
+                />
+              <Painting 
+                path="painting" 
+                page={this.state.page} 
+                pageChange={this.changePage}
+                />
+              <Drawing 
+              path="drawing" 
+              page={this.state.page} 
+              pageChange={this.changePage}
+              />
           </Work>
-          <About path="about" pageChange={this.changePage}/>
-          <Contact path="contact" pageChange={this.changePage}/>
-          <Terms path="terms" pageChange={this.changePage}/>
-          <Credits path="credits" pageChange={this.changePage}/>          
+          <About 
+            path="about" 
+            pageChange={this.changePage}
+            />
+          <Contact 
+            path="contact" 
+            pageChange={this.changePage}
+            />
+          <Terms 
+            path="terms" 
+            pageChange={this.changePage}
+            />
+          <Credits 
+            path="credits" 
+            pageChange={this.changePage}
+            />                  
         </Router>
-        <NavFooter page={this.state.page}/>
+        <NavFooter page={this.state.page}/> 
+        
       </div>
 
     );

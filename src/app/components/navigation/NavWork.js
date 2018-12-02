@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import NavLink from './NavLink';
 
 export default props => {
@@ -10,7 +10,9 @@ export default props => {
           <NavLink to="sculpture">sculpture</NavLink>{' '}
           <NavLink to="painting">painting</NavLink>{' '}
           <NavLink to="drawing">drawing</NavLink>
+          
           </nav>
+
 
     );
   }

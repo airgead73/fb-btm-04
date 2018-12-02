@@ -1,11 +1,7 @@
 import React, { Component } from 'react';
-import { Link } from '@reach/router';
-import NavWork from '../Nav/NavWork';
+import NavWork from '../navigation/NavWork';
 
 class Work extends Component {
-    constructor(props) {
-      super(props);
-    }
     componentDidMount() {
       document.body.setAttribute("id", "work");
       document.title = "work";

@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 
 class WorkDrawing extends Component {
-    constructor(props) {
-      super(props);
-    }
     componentDidMount() {
       document.body.setAttribute("id", "workDrawing");
       document.title = "work | drawing";
