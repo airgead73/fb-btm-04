@@ -10,8 +10,7 @@ class Credits extends React.Component {
   
       return (
         <div>
-          <h2>Credits - {this.props.path}</h2>
-          <p>paragraph</p>
+          <h1>{this.props.path}</h1>
         </div>
       );
     }

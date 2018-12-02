@@ -8,7 +8,7 @@ export default props => {
         {...props}
         getProps={({ isCurrent }) => {
             return {
-              className: isCurrent ? "active" : null
+              id: isCurrent ? "currentLink" : null
           };
         }}
       />

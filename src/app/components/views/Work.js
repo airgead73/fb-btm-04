@@ -11,7 +11,7 @@ class Work extends Component {
   
       return (
         <div>
-          <h2>Work - {this.props.path}</h2>
+          <h1>{this.props.page}</h1>
           <NavWork page={this.props.page}/>
           {this.props.children}
         </div>

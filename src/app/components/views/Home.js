@@ -10,7 +10,7 @@ class Home extends Component {
   
       return (
         <div>
-          <h2>Home - {this.props.path}</h2>
+          <h2>{this.props.title}</h2>
           <p>02_Blocks Branch</p>
         </div>
       );

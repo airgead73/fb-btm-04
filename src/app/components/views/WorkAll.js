@@ -10,8 +10,7 @@ class WorkAll extends Component {
   
       return (
         <div>
-          <h2>WorkAll - {this.props.path}</h2>
-          <p>paragraph</p>
+          <h1>{this.props.page}</h1>
         </div>
       );
     }

@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import { Router } from '@reach/router';
 
-// nav
+// grid
 
-//import Nav from './components/navigation/Nav';
-//import NavFooter from './components/navigation/NavFooter';
+import { Container } from './components/grid';
+
+// blocks
+
 import Header from './components/blocks/Header';
 import Footer from './components/blocks/Footer';
 import Main from './components/blocks/Main';
@@ -44,89 +46,92 @@ class App extends Component {
         
         <Header page={this.state.page}/>
         <Main page={this.state.page}>
+        <Container>
         <Router>
-          <Home 
-            path="/" 
-            pageChange={this.changePage}
-            title="home"
-            id="bodyHome"
-            className="home"
-            />
-          <Work 
-            path="work" 
-            page={this.state.page} 
-            pageChange={this.changePage}
-            title="work"
-            id="bodyWork"
-            className="work"
-            >
-              <WorkHome path="/" 
-                page={this.state.page} 
-                pageChange={this.changePage}
-                title="work"
-                id="bodyWorkHome"
-                className="workHome"
-                />
-              <All 
-                path="all" 
-                page={this.state.page} 
-                pageChange={this.changePage}
-                title="work | all"
-                id="bodyWorkAll"
-                className="workAll"
-                />
-              <Sculpture 
-                path="sculpture" 
-                page={this.state.page} 
-                pageChange={this.changePage}
-                title="work | sculpture"
-                id="bodyWorkSculpture"
-                className="workSculpture"
-                />
-              <Painting 
-                path="painting" 
-                page={this.state.page} 
-                pageChange={this.changePage}
-                title="work | painting"
-                id="bodyWorkPainting"
-                className="workPainting"
-                />
-              <Drawing 
-              path="drawing" 
+            <Home 
+              path="/" 
+              pageChange={this.changePage}
+              title="home"
+              id="bodyHome"
+              className="home"
+              />
+            <Work 
+              path="work" 
               page={this.state.page} 
               pageChange={this.changePage}
-              title="work | drawing"
-              id="bodyWorkDrawing"
-              className="workDrawing"
+              title="work"
+              id="bodyWork"
+              className="work"
+              >
+                <WorkHome path="/" 
+                  page={this.state.page} 
+                  pageChange={this.changePage}
+                  title="work"
+                  id="bodyWorkHome"
+                  className="work"
+                  />
+                <All 
+                  path="all" 
+                  page={this.state.page} 
+                  pageChange={this.changePage}
+                  title="work | all"
+                  id="bodyWorkAll"
+                  className="workAll"
+                  />
+                <Sculpture 
+                  path="sculpture" 
+                  page={this.state.page} 
+                  pageChange={this.changePage}
+                  title="work | sculpture"
+                  id="bodyWorkSculpture"
+                  className="workSculpture"
+                  />
+                <Painting 
+                  path="painting" 
+                  page={this.state.page} 
+                  pageChange={this.changePage}
+                  title="work | painting"
+                  id="bodyWorkPainting"
+                  className="workPainting"
+                  />
+                <Drawing 
+                path="drawing" 
+                page={this.state.page} 
+                pageChange={this.changePage}
+                title="work | drawing"
+                id="bodyWorkDrawing"
+                className="workDrawing"
+                />
+            </Work>
+            <About 
+              path="about" 
+              pageChange={this.changePage}
+              title="about"
+              id="bodyAbout"
+              className="about"
               />
-          </Work>
-          <About 
-            path="about" 
-            pageChange={this.changePage}
-            title="about"
-            id="bodyAbout"
-            className="about"
-            />
-          <Contact 
-            path="contact" 
-            pageChange={this.changePage}
-            title="contact"
-            id="bodyContact"
-            className="contact"
-            />
-          <Terms 
-            path="terms" 
-            pageChange={this.changePage}
-            title="terms"
-            id="bodyTerms"
-            />
-          <Credits 
-            path="credits" 
-            pageChange={this.changePage}
-            title="credits"
-            id="bodyCredits"
-            />                  
-        </Router>
+            <Contact 
+              path="contact" 
+              pageChange={this.changePage}
+              title="contact"
+              id="bodyContact"
+              className="contact"
+              />
+            <Terms 
+              path="terms" 
+              pageChange={this.changePage}
+              title="terms"
+              id="bodyTerms"
+              />
+            <Credits 
+              path="credits" 
+              pageChange={this.changePage}
+              title="credits"
+              id="bodyCredits"
+              />                  
+          </Router>
+        </Container>
+
         </Main>
         <Footer page={this.state.page}/> 
         

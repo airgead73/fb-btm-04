@@ -10,8 +10,7 @@ class Terms extends Component {
   
       return (
         <div>
-          <h2>Terms - {this.props.path}</h2>
-          <p>paragraph</p>
+          <h1>{this.props.path}</h1>
         </div>
       );
     }

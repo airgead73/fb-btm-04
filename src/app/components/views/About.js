@@ -10,8 +10,7 @@ class About extends Component {
   
       return (
         <div>
-          <h2>About - {this.props.path}</h2>
-          <p>paragraph</p>
+          <h1>{this.props.title}</h1>
         </div>
       );
     }

@@ -10,8 +10,7 @@ class Contact extends Component {
   
       return (
         <div>
-          <h2>Contact - {this.props.path}</h2>
-          <p>paragraph</p>
+          <h1>{this.props.title}</h1>
         </div>
       );
     }

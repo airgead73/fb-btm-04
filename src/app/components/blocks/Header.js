@@ -6,7 +6,6 @@ class Header extends Component {
         return (
             <header>
                 <Nav page={this.props.page}/>
-                <h1>Brian's Site</h1>
             </header>
         );
     }
