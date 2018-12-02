@@ -41,51 +41,86 @@ class App extends Component {
       <div>
         <Nav page={this.state.page}/>
         <Router>
-          <Home path="/" pageChange={this.changePage}/>
-          <Work path="work" 
+          <Home 
+            path="/" 
+            pageChange={this.changePage}
+            title="home"
+            id="bodyHome"
+            className="home"
+            />
+          <Work 
+            path="work" 
             page={this.state.page} 
             pageChange={this.changePage}
+            title="work"
+            id="bodyWork"
+            className="work"
             >
               <WorkHome path="/" 
                 page={this.state.page} 
                 pageChange={this.changePage}
+                title="work"
+                id="bodyWorkHome"
+                className="workHome"
                 />
               <All 
                 path="all" 
                 page={this.state.page} 
                 pageChange={this.changePage}
+                title="work | all"
+                id="bodyWorkAll"
+                className="workAll"
                 />
               <Sculpture 
                 path="sculpture" 
                 page={this.state.page} 
                 pageChange={this.changePage}
+                title="work | sculpture"
+                id="bodyWorkSculpture"
+                className="workSculpture"
                 />
               <Painting 
                 path="painting" 
                 page={this.state.page} 
                 pageChange={this.changePage}
+                title="work | painting"
+                id="bodyWorkPainting"
+                className="workPainting"
                 />
               <Drawing 
               path="drawing" 
               page={this.state.page} 
               pageChange={this.changePage}
+              title="work | drawing"
+              id="bodyWorkDrawing"
+              className="workDrawing"
               />
           </Work>
           <About 
             path="about" 
             pageChange={this.changePage}
+            title="about"
+            id="bodyAbout"
+            className="about"
             />
           <Contact 
             path="contact" 
             pageChange={this.changePage}
+            title="contact"
+            id="bodyContact"
+            className="contact"
             />
           <Terms 
             path="terms" 
             pageChange={this.changePage}
+            title="terms"
+            id="bodyTerms"
             />
           <Credits 
             path="credits" 
             pageChange={this.changePage}
+            title="credits"
+            id="bodyCredits"
             />                  
         </Router>
         <NavFooter page={this.state.page}/> 

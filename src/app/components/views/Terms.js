@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 
 class Terms extends Component {
     componentDidMount() {
-      document.body.setAttribute("id", "Terms");
-      document.title = "Terms";
-      this.props.pageChange("Terms");
+      document.body.setAttribute("id", this.props.id);
+      document.title = this.props.title;
+      this.props.pageChange(this.props.path);
     }
     render() {
   

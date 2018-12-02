@@ -3,9 +3,9 @@ import NavWork from '../navigation/NavWork';
 
 class Work extends Component {
     componentDidMount() {
-      document.body.setAttribute("id", "work");
-      document.title = "work";
-      this.props.pageChange("work");
+      document.body.setAttribute("id", this.props.id);
+      document.title = this.props.title;
+      this.props.pageChange(this.props.path);
     }
     render() {
   

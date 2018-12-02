@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 
 class WorkAll extends Component {
     componentDidMount() {
-      document.body.setAttribute("id", "workAll");
-      document.title = "work | all";
-      this.props.pageChange("workAll");
+      document.body.setAttribute("id", this.props.id);
+      document.title = this.props.title;
+      this.props.pageChange(this.props.path);
     }
     render() {
   

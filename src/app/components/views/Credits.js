@@ -2,9 +2,9 @@ import React from 'react';
 
 class Credits extends React.Component {
     componentDidMount() {
-      document.body.setAttribute("id", "credits");
-      document.title = "credits";
-      this.props.pageChange("credits");
+      document.body.setAttribute("id", this.props.id);
+      document.title = this.props.title;
+      this.props.pageChange(this.props.path);
     }
     render() {
   
