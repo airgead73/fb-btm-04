@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import { Router } from '@reach/router';
 
+// database
+
+import db from '../db/getDB';
+
 // grid
 
 import { Container } from './components/grid';
@@ -29,9 +33,11 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      page: "app"
+      page: "app",
+      gallery: db("all")
     };
-    this.changePage = this.changePage.bind(this);  
+    this.changePage = this.changePage.bind(this);
+    this.changeGallery = this.changeGallery.bind(this); 
   }
 
   changePage(newPage) {
@@ -39,7 +45,13 @@ class App extends Component {
       page: newPage
     });
   }
- 
+
+  changeGallery(newGallery) {
+    this.setState({
+      gallery: db(newGallery)
+    });
+  }
+   
   render() {
     return (
       <div>
@@ -62,6 +74,7 @@ class App extends Component {
               title="brian's work"
               id="bodyWork"
               className="work"
+              changeGallery={this.changeGallery}
               >
                 <WorkHome path="/" 
                   page={this.state.page} 
@@ -77,6 +90,8 @@ class App extends Component {
                   title="brian's work | all"
                   id="bodyWorkAll"
                   className="workAll"
+                  gallery={this.state.gallery}
+                  changeGallery={this.changeGallery}
                   />
                 <Sculpture 
                   path="sculpture" 
@@ -84,15 +99,19 @@ class App extends Component {
                   pageChange={this.changePage}
                   title="brian's work | sculpture"
                   id="bodyWorkSculpture"
-                  className="workSculpture"
+                  className="WorkSculpture"
+                  gallery={this.state.gallery}
+                  changeGallery={this.changeGallery}
                   />
                 <Painting 
                   path="painting" 
                   page={this.state.page} 
-                  pageChange={this.changePage}
+                  pageChange={this.changePagechange}
                   title="brian's work | painting"
                   id="bodyWorkPainting"
                   className="workPainting"
+                  gallery={this.state.gallery}
+                  changeGallery={this.changeGallery}
                   />
                 <Drawing 
                 path="drawing" 
@@ -101,6 +120,8 @@ class App extends Component {
                 title="brian's work | drawing"
                 id="bodyWorkDrawing"
                 className="workDrawing"
+                gallery={this.state.gallery}
+                changeGallery={this.changeGallery}
                 />
             </Work>
             <About 

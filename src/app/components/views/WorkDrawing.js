@@ -8,18 +8,14 @@ class WorkDrawing extends Component {
       document.body.setAttribute("id", this.props.id);
       document.title = this.props.title;
       this.props.pageChange(this.props.path);
+      this.props.changeGallery("Drawing");
     }
     render() {
   
       return (
-        <Row>
-          <Column size="12 md-2">
-            <h1>{this.props.page}</h1>
-          </Column>
-          <Column size="12 md-10">
-            <BMGallery photos={models.getForm('drawing')} direction={"row"}/>
-          </Column>
-        </Row>
+ 
+            <BMGallery photos={this.props.gallery} direction={"row"}/>
+
       );
     }
   }
