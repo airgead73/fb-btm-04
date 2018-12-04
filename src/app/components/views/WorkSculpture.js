@@ -17,7 +17,7 @@ class WorkSculpture extends Component {
             <h1>{this.props.page}</h1>
           </Column>
           <Column size="12 md-10">
-            <BMGallery photos={models.getForm('drawing')} direction={"row"}/>
+            <BMGallery photos={models.getForm('sculpture')} direction={"row"}/>
           </Column>
         </Row>
       );
