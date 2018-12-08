@@ -15,19 +15,31 @@ import Header from './components/blocks/Header';
 import Footer from './components/blocks/Footer';
 import Main from './components/blocks/Main';
 
-// views
+// main views
 
 import Home from './components/views/Home';
 import About from './components/views/About';
 import Work from './components/views/Work';
+import Contact from './components/views/Contact';
+import Terms from './components/views/Terms';
+import Credits from './components/views/Credits';
+
+// work views
+
 import WorkHome from './components/views/WorkHome';
 import All from './components/views/WorkAll';
 import Sculpture from './components/views/WorkSculpture';
 import Painting from './components/views/WorkPainting';
 import Drawing from './components/views/WorkDrawing';
-import Contact from './components/views/Contact';
-import Terms from './components/views/Terms';
-import Credits from './components/views/Credits';
+
+// sculpture views 
+
+import SculptureHome from './components/views/SculptureHome';
+import Abstract from './components/views/SculptureAbstract';
+import Figures from './components/views/SculptureFigures';
+import Portrait from './components/views/SculpturePortrait';
+import Wildlife from './components/views/SculptureWildlife';
+
 
 class App extends Component {
   constructor(props) {
@@ -93,7 +105,7 @@ class App extends Component {
                   gallery={this.state.gallery}
                   changeGallery={this.changeGallery}
                   />
-                <Sculpture 
+                <Sculpture> 
                   path="sculpture" 
                   page={this.state.page} 
                   pageChange={this.changePage}
@@ -102,7 +114,8 @@ class App extends Component {
                   className="WorkSculpture"
                   gallery={this.state.gallery}
                   changeGallery={this.changeGallery}
-                  />
+                    <Abstract/>
+                <Sculpture/>
                 <Painting 
                   path="painting" 
                   page={this.state.page} 
