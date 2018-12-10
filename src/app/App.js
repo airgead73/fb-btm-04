@@ -3,7 +3,7 @@ import { Router } from '@reach/router';
 
 // database
 
-import db from '../db/getDB';
+import getDB from '../db/getDB';
 
 // grid
 
@@ -46,7 +46,7 @@ class App extends Component {
     super(props);
     this.state = {
       page: "app",
-      mainGallery: "main gallery",
+      mainGallery: getDB("all"),
       subGallery: "sub gallery"
     };
     this.changePage = this.changePage.bind(this);
@@ -132,6 +132,8 @@ class App extends Component {
                       title="brian's work | sculpture"
                       id="bodyWorkSculpture"
                       className="WorkSculpture"
+                      gallery={this.state.subGallery}
+                      galleryChange={this.changeGallery}                      
                     />
                     <Figures
                       path="figures"
@@ -140,6 +142,8 @@ class App extends Component {
                       title="sculpture | figures"
                       id="bodySculptureFigures"
                       className="Sculpture | Figures"
+                      gallery={this.state.subGallery}
+                      galleryChange={this.changeGallery}                      
                     />
                     <Portrait
                        path="portrait"
@@ -148,6 +152,8 @@ class App extends Component {
                        title="sculpture | portrait"
                        id="bodySculpture"
                        className="SculpturePortrait"
+                       gallery={this.state.subGallery}
+                       galleryChange={this.changeGallery}                       
                     />
                     <Wildlife
                       path="wildlife"
@@ -156,6 +162,8 @@ class App extends Component {
                       title="sculpture | wildlife"
                       id="bodySculptureWildlife"
                       className="SculptureWildlife"
+                      gallery={this.state.subGallery}
+                      galleryChange={this.changeGallery}                      
                     />
                     <Abstract
                        path="abstract"
@@ -164,6 +172,8 @@ class App extends Component {
                        title="sculpture | abstract"
                        id="bodySculptureAbstract"
                        className="SculptureAbstract"
+                       gallery={this.state.subGallery}
+                       galleryChange={this.changeGallery}                       
                     />
                   </Sculpture>
                 <Painting 

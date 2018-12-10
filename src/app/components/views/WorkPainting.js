@@ -6,13 +6,13 @@ class WorkPainting extends Component {
       document.body.setAttribute("id", this.props.id);
       document.title = this.props.title;
       this.props.pageChange(this.props.path);
-      this.props.galleryChange("main", "drawing");
+      this.props.galleryChange("main", "painting");
     }
     render() {
   
       return (
 
-            <h1>Work Painting | {this.props.gallery}</h1>
+            <h1>{this.props.gallery}</h1>
 
       );
     }

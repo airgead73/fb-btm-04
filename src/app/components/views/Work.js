@@ -3,12 +3,6 @@ import NavLink from '../navigation/NavLink';
 import { Row, Column } from '../grid';
 
 class Work extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      workGallery: "work gallery"
-    };
-  }
 
   componentDidMount() {
       document.body.setAttribute("id", this.props.id);

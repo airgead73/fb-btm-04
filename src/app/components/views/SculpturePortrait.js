@@ -5,13 +5,14 @@ class SculpturePortrait extends Component {
     document.body.setAttribute("id", this.props.id);
     document.title = this.props.title;
     this.props.pageChange(this.props.path);
+    this.props.galleryChange("sub", "portrait");
   }
     render() {
   
       return (
+           
+        <h1>{this.props.gallery}</h1>
 
-            
-<h1>Sculpture Portrait</h1>
       );
     }
   }

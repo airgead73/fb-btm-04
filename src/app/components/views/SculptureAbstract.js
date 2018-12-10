@@ -4,12 +4,13 @@ class SculptureAbstract extends Component {
     document.body.setAttribute("id", this.props.id);
     document.title = this.props.title;
     this.props.pageChange(this.props.path);
+    this.props.galleryChange("sub", "abstract");
   }
     render() {
   
       return (
 
-        <h1>Sculpture Abstract</h1>
+        <h1>{this.props.gallery}</h1>
 
       );
     }

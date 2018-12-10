@@ -5,12 +5,13 @@ class SculptureWildlife extends Component {
     document.body.setAttribute("id", this.props.id);
     document.title = this.props.title;
     this.props.pageChange(this.props.path);
+    this.props.galleryChange("sub", "wildlife");
   }
     render() {
   
       return (
 
-            <h1>Sculpture Wildlife</h1>
+        <h1>{this.props.gallery}</h1>
 
       );
     }

@@ -13,7 +13,7 @@ class WorkSculpture extends Component {
       return (
 
         <div>
-          sculpture | {this.props.gallery}
+          <h1>{this.props.gallery}</h1>
           {this.props.children}
       </div>          
 
