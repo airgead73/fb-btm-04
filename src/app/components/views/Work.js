@@ -1,9 +1,14 @@
 import React, { Component } from 'react';
 import NavLink from '../navigation/NavLink';
-import SculptureFilter from '../forms/SculptureFilter';
 import { Row, Column } from '../grid';
 
 class Work extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      workGallery: "work gallery"
+    };
+  }
 
   componentDidMount() {
       document.body.setAttribute("id", this.props.id);
@@ -22,23 +27,18 @@ class Work extends Component {
             <nav className={`worknav_${this.props.page}`}>
           
               <NavLink to="all">all</NavLink><br/>
-              <NavLink to="sculpture">sculpture</NavLink><br/>
-
-              {this.props.page === "sculpture" && (
-                <SculptureFilter
-                handleChange={this.props.changeGallery}
-                />
-              )}
-
-              
-
+              <NavLink to="sculpture">sculpture</NavLink><br/> 
+                  <NavLink to="sculpture/figures">figures</NavLink><br/>
+                  <NavLink to="sculpture/portrait">portrait</NavLink><br/>      
+                  <NavLink to="sculpture/abstract">abstract</NavLink><br/>
+                  <NavLink to="sculpture/wildlife">wildlife</NavLink><br/>                    
               <NavLink to="painting">painting</NavLink><br/>
               <NavLink to="drawing">drawing</NavLink>
           
           </nav>
           </Column>
           <Column size="12 md-10">
-          {this.props.children}
+            {this.props.children}
           </Column>
         </Row>          
 

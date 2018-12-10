@@ -46,11 +46,10 @@ class App extends Component {
     super(props);
     this.state = {
       page: "app",
-      mainGallery: "main gallery",
-      subGallery: "sub gallery"
+      gallery: db("all")
     };
     this.changePage = this.changePage.bind(this);
-    this.changeGallery = this.changeGallery.bind(this);
+    this.changeGallery = this.changeGallery.bind(this); 
   }
 
   changePage(newPage) {
@@ -59,21 +58,12 @@ class App extends Component {
     });
   }
 
-  changeGallery(galleryType, newGallery) {
-    if (galleryType === "main") {
-      this.setState({
-        mainGallery: newGallery
-      });
-    } else if (galleryType === "sub") {
-      this.setState({
-        subGallery: newGallery
-      });     
-    }
-
+  changeGallery(newGallery) {
+    this.setState({
+      gallery: db(newGallery)
+    });
   }
-
-
-
+   
   render() {
     return (
       <div>
@@ -112,8 +102,8 @@ class App extends Component {
                   title="brian's work | all"
                   id="bodyWorkAll"
                   className="workAll"
-                  gallery={this.state.mainGallery}
-                  galleryChange={this.changeGallery}
+                  gallery={this.state.gallery}
+                  changeGallery={this.changeGallery}
                   />
                 <Sculpture
                   path="sculpture" 
@@ -122,8 +112,8 @@ class App extends Component {
                   title="brian's work | sculpture"
                   id="bodyWorkSculpture"
                   className="WorkSculpture"
-                  gallery={this.state.subGallery}
-                  galleryChange={this.changeGallery}
+                  gallery={this.state.gallery}
+                  changeGallery={this.changeGallery}                    
                   >
                     <SculptureHome
                       path="/"
@@ -132,6 +122,8 @@ class App extends Component {
                       title="brian's work | sculpture"
                       id="bodyWorkSculpture"
                       className="WorkSculpture"
+                      gallery={this.state.gallery}
+                      changeGallery={this.changeGallery}
                     />
                     <Figures
                       path="figures"
@@ -140,14 +132,18 @@ class App extends Component {
                       title="sculpture | figures"
                       id="bodySculptureFigures"
                       className="Sculpture | Figures"
+                      gallery={this.state.gallery}
+                      changeGallery={this.changeGallery}
                     />
                     <Portrait
                        path="portrait"
                        page={this.state.page}
                        pageChange={this.changePage}
-                       title="sculpture | portrait"
-                       id="bodySculpture"
+                       title="sculpture | figures"
+                       id="bodySculpture | Portrait"
                        className="SculpturePortrait"
+                       gallery={this.state.gallery}
+                       changeGallery={this.changeGallery}
                     />
                     <Wildlife
                       path="wildlife"
@@ -156,6 +152,8 @@ class App extends Component {
                       title="sculpture | wildlife"
                       id="bodySculptureWildlife"
                       className="SculptureWildlife"
+                      gallery={this.state.gallery}
+                      changeGallery={this.changeGallery}
                     />
                     <Abstract
                        path="abstract"
@@ -164,6 +162,8 @@ class App extends Component {
                        title="sculpture | abstract"
                        id="bodySculptureAbstract"
                        className="SculptureAbstract"
+                       gallery={this.state.gallery}
+                       changeGallery={this.changeGallery}
                     />
                   </Sculpture>
                 <Painting 
@@ -173,8 +173,8 @@ class App extends Component {
                   title="brian's work | painting"
                   id="bodyWorkPainting"
                   className="workPainting"
-                  gallery={this.state.mainGallery}
-                  galleryChange={this.changeGallery}
+                  gallery={this.state.gallery}
+                  changeGallery={this.changeGallery}
                   />
                 <Drawing 
                 path="drawing" 
@@ -183,8 +183,8 @@ class App extends Component {
                 title="brian's work | drawing"
                 id="bodyWorkDrawing"
                 className="workDrawing"
-                gallery={this.state.mainGallery}
-                galleryChange={this.changeGallery}
+                gallery={this.state.gallery}
+                changeGallery={this.changeGallery}
                 />
             </Work>
             <About 
