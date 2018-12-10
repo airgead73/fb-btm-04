@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import BMGallery from '../gallery/BMGallery';
 
 
 class WorkSculpture extends Component {
@@ -12,8 +13,8 @@ class WorkSculpture extends Component {
   
       return (
 
-        <div>
-          <h1>{this.props.gallery}</h1>
+      <div>
+          <BMGallery photos={this.props.gallery} direction={"rows"}/>
           {this.props.children}
       </div>          
 

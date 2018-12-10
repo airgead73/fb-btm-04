@@ -3,7 +3,7 @@ import { Router } from '@reach/router';
 
 // database
 
-import getDB from '../db/getDB';
+import db from '../db/getDB';
 
 // grid
 
@@ -46,7 +46,7 @@ class App extends Component {
     super(props);
     this.state = {
       page: "app",
-      mainGallery: getDB("all"),
+      mainGallery: db("all"),
       subGallery: "sub gallery"
     };
     this.changePage = this.changePage.bind(this);
@@ -62,11 +62,11 @@ class App extends Component {
   changeGallery(galleryType, newGallery) {
     if (galleryType === "main") {
       this.setState({
-        mainGallery: newGallery
+        mainGallery: db(newGallery)
       });
     } else if (galleryType === "sub") {
       this.setState({
-        subGallery: newGallery
+        subGallery: db(newGallery)
       });     
     }
 

@@ -12,7 +12,7 @@ class WorkAll extends Component {
   
       return (
 
-        <BMGallery photos={this.props.gallery} direction={"row"}/>
+        <BMGallery photos={this.props.gallery} direction={"rows"}/>
             
 
       );
