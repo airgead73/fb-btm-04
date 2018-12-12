@@ -17,7 +17,7 @@ class Work extends Component {
 
         <Row>
           <Column size="12 md-2">
-            <h1>{this.props.page}</h1>
+            <h1>{this.props.path}</h1>
             <nav className={`worknav_${this.props.page}`}>
           
               <NavLink to="all">all</NavLink><br/>
@@ -35,11 +35,7 @@ class Work extends Component {
             {this.props.children}
           </Column>
         </Row>          
-
-         
-          
-
-          
+       
         </div>
       );
     }

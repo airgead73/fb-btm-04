@@ -11,9 +11,8 @@ class WorkDrawing extends Component {
     render() {
   
       return (
-          <div>
-            <h1>{this.props.gallery}</h1>
-          </div>
+
+        <BMGallery photos={this.props.gallery} direction={"rows"}/>
             
 
       );

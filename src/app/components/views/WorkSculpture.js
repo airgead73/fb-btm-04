@@ -13,8 +13,7 @@ class WorkSculpture extends Component {
   
       return (
 
-      <div>
-          <BMGallery photos={this.props.gallery} direction={"rows"}/>
+      <div> 
           {this.props.children}
       </div>          
 
