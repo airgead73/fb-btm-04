@@ -4,16 +4,20 @@ class SculptureHome extends Component {
   componentDidMount() {
     document.body.setAttribute("id", this.props.id);
     document.title = this.props.title;
-    this.props.pageChange(this.props.path);
+    this.props.pageChange("sculpture");
   }
     render() {
   
       return (
       
-        <div>
+        
+         <div>
+           <p>------------</p>
+            {this.props.children}
+         </div> 
           
-          {this.props.children}
-          </div>
+          
+      
         
            
 

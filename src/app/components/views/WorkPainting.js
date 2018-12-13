@@ -6,13 +6,12 @@ class WorkPainting extends Component {
       document.body.setAttribute("id", this.props.id);
       document.title = this.props.title;
       this.props.pageChange(this.props.path);
-      this.props.galleryChange("main", "painting");
     }
     render() {
   
       return (
 
-        <BMGallery photos={this.props.gallery} direction={"rows"}/>
+        <p>painting page</p> 
 
       );
     }

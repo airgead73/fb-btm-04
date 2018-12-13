@@ -1,10 +1,6 @@
 import React, { Component } from 'react';
 import { Router } from '@reach/router';
 
-// database
-
-import db from '../db/getDB';
-
 // grid
 
 import { Container } from './components/grid';
@@ -45,31 +41,15 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      page: "app",
-      mainGallery: db("all"),
-      subGallery: "sub gallery"
+      page: "app"
     };
     this.changePage = this.changePage.bind(this);
-    this.changeGallery = this.changeGallery.bind(this);
   }
 
   changePage(newPage) {
     this.setState({
       page: newPage
     });
-  }
-
-  changeGallery(galleryType, newGallery) {
-    if (galleryType === "main") {
-      this.setState({
-        mainGallery: db(newGallery)
-      });
-    } else if (galleryType === "sub") {
-      this.setState({
-        subGallery: db(newGallery)
-      });     
-    }
-
   }
 
   render() {
@@ -83,95 +63,61 @@ class App extends Component {
             <Home 
               path="/" 
               pageChange={this.changePage}
-              title="brian moneypenny"
-              id="bodyHome"
-              className="home"
+              title="brian moneypenny"             
+    
               />
             <Work 
               path="work" 
               page={this.state.page} 
               pageChange={this.changePage}
               title="brian's work"
-              id="bodyWork"
-              className="work"
               >
                 <WorkHome 
                   path="/" 
                   page={this.state.page} 
                   pageChange={this.changePage}
                   title="brian's work"
-                  id="bodyWorkHome"
-                  className="work"
                   />
                 <All 
                   path="all" 
                   page={this.state.page} 
                   pageChange={this.changePage}
                   title="brian's work | all"
-                  id="bodyWorkAll"
-                  className="workAll"
-                  gallery={this.state.mainGallery}
-                  galleryChange={this.changeGallery}
                   />
                 <Sculpture
                   path="sculpture" 
                   page={this.state.page} 
                   pageChange={this.changePage}
                   title="brian's work | sculpture"
-                  id="bodyWorkSculpture"
-                  className="WorkSculpture"
-                  gallery={this.state.subGallery}
-                  galleryChange={this.changeGallery}
                   >
                     <SculptureHome
                       path="/"
                       page={this.state.page}
                       pageChange={this.changePage}
-                      title="brian's work | sculpture"
-                      id="bodyWorkSculpture"
-                      className="WorkSculpture"
-                      gallery={this.state.subGallery}
-                      galleryChange={this.changeGallery}                      
+                      title="brian's work | sculpture"               
                     />
                     <Figures
-                      path="figures"
+                      path="figure"
                       page={this.state.page}
                       pageChange={this.changePage}
-                      title="sculpture | figures"
-                      id="bodySculptureFigures"
-                      className="Sculpture | Figures"
-                      gallery={this.state.subGallery}
-                      galleryChange={this.changeGallery}                      
+                      title="sculpture | figures"                   
                     />
                     <Portrait
                        path="portrait"
                        page={this.state.page}
-                       pageChange={this.changePage}
-                       title="sculpture | portrait"
-                       id="bodySculpture"
-                       className="SculpturePortrait"
-                       gallery={this.state.subGallery}
-                       galleryChange={this.changeGallery}                       
+                       pageChange={this.changePage}                    
                     />
                     <Wildlife
                       path="wildlife"
                       page={this.state.page}
                       pageChange={this.changePage}
-                      title="sculpture | wildlife"
-                      id="bodySculptureWildlife"
-                      className="SculptureWildlife"
-                      gallery={this.state.subGallery}
-                      galleryChange={this.changeGallery}                      
+                      title="sculpture | wildlife"                    
                     />
                     <Abstract
                        path="abstract"
                        page={this.state.page}
                        pageChange={this.changePage}
-                       title="sculpture | abstract"
-                       id="bodySculptureAbstract"
-                       className="SculptureAbstract"
-                       gallery={this.state.subGallery}
-                       galleryChange={this.changeGallery}                       
+                       title="sculpture | abstract"              
                     />
                   </Sculpture>
                 <Painting 
@@ -179,47 +125,34 @@ class App extends Component {
                   page={this.state.page} 
                   pageChange={this.changePage}
                   title="brian's work | painting"
-                  id="bodyWorkPainting"
-                  className="workPainting"
-                  gallery={this.state.mainGallery}
-                  galleryChange={this.changeGallery}
                   />
                 <Drawing 
                 path="drawing" 
                 page={this.state.page} 
                 pageChange={this.changePage}
                 title="brian's work | drawing"
-                id="bodyWorkDrawing"
-                className="workDrawing"
-                gallery={this.state.mainGallery}
-                galleryChange={this.changeGallery}
                 />
             </Work>
             <About 
               path="about" 
               pageChange={this.changePage}
               title="about brian"
-              id="bodyAbout"
-              className="about"
               />
             <Contact 
               path="contact" 
               pageChange={this.changePage}
               title="contact brian"
-              id="bodyContact"
-              className="contact"
+
               />
             <Terms 
               path="terms" 
               pageChange={this.changePage}
               title="terms and conditions"
-              id="bodyTerms"
               />
             <Credits 
               path="credits" 
               pageChange={this.changePage}
               title="credits"
-              id="bodyCredits"
               />                  
           </Router>
         </Container>

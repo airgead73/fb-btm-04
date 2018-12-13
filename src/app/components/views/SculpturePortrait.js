@@ -1,17 +1,19 @@
 import React, { Component } from 'react';
+import BMGallery from '../gallery/BMGallery';
+import db from '../../../db/getDB';
 
 class SculpturePortrait extends Component {
   componentDidMount() {
     document.body.setAttribute("id", this.props.id);
     document.title = this.props.title;
     this.props.pageChange(this.props.path);
-    this.props.galleryChange("sub", "portrait");
+
   }
     render() {
   
       return (
            
-        <h1>{this.props.gallery}</h1>
+        <BMGallery photos={db(this.props.path)} direction={"rows"}/>
 
       );
     }

@@ -10,7 +10,7 @@ export default props => {
         <Container>
           <Row>
             <Column size="12 sm-6">
-              <Link className="navbar-brand" to="/">Brian's site</Link>
+              <Link className="navbar-brand" to="/">Brian's site | page: {props.page}</Link>
             </Column>
             <Column size="12 sm-6">
               <ul className="nav justify-content-center">

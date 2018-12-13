@@ -2,13 +2,15 @@ import React, { Component } from 'react';
 import NavLink from '../navigation/NavLink';
 import { Row, Column } from '../grid';
 
-class Work extends Component {
 
+class Work extends Component {
+  changeGallery(newGallery) {
+
+  }
   componentDidMount() {
       document.body.setAttribute("id", this.props.id);
       document.title = this.props.title;
       this.props.pageChange(this.props.path);
-  
   }
     render() {
   
@@ -17,12 +19,14 @@ class Work extends Component {
 
         <Row>
           <Column size="12 md-2">
-            <h1>{this.props.path}</h1>
-            <nav className={`worknav_${this.props.page}`}>
+
+          <h1>{this.props.page}</h1>
+            
+            <nav>
           
               <NavLink to="all">all</NavLink><br/>
               <NavLink to="sculpture">sculpture</NavLink><br/> 
-                  <NavLink to="sculpture/figures">figures</NavLink><br/>
+                  <NavLink to="sculpture/figure">figures</NavLink><br/>
                   <NavLink to="sculpture/portrait">portrait</NavLink><br/>      
                   <NavLink to="sculpture/abstract">abstract</NavLink><br/>
                   <NavLink to="sculpture/wildlife">wildlife</NavLink><br/>                    
