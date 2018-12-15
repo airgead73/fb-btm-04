@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Column, Row } from '../grid';
 
 class Home extends Component {
     componentDidMount() {
@@ -9,10 +10,12 @@ class Home extends Component {
     render() {
   
       return (
-        <div>
-          <h2>{this.props.title}</h2>
-          <p>03_versionA Branch</p>
-        </div>
+        <Row>
+          <Column size="12">
+            <h1 className="home_title">{this.props.title}</h1>
+          </Column>
+        </Row>
+
       );
     }
   }

@@ -25,6 +25,9 @@ body {
 ////// LINKS & BTNS ////////
 ////////////////////////////
  */
+a.btt_home {
+  display: none; }
+
 /*
 ////////////////////////////
 ////// LISTS //////////////
@@ -68,11 +71,46 @@ header {
 a#currentLink {
   text-decoration: underline; }
 
+nav.nav_home #mainNav {
+  position: absolute;
+  top: 300px;
+  background-color: RGBA(0, 0, 0, 0.5);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%; }
+
+#mainNav a {
+  color: white; }
+
 /*
 ////////////////////////////
 ////// MAIN ////////////////
 ////////////////////////////
  */
+#pageHome {
+  background-image: url("../images/bg-1-sm.jpg");
+  background-position-x: center;
+  background-position-y: bottom;
+  background-size: cover; }
+
+h1.home_title {
+  display: none; }
+
+nav.nav_home .logo_header {
+  display: block;
+  height: 50px;
+  width: 280px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url("../images/logo_sm.png");
+  background-size: cover; }
+
+footer.footer_home {
+  color: white; }
+  footer.footer_home a {
+    color: white; }
+
 /*
 ////////////////////////////
 ////// FOOTER //////////////

@@ -10,10 +10,10 @@ export default props => {
         <Container>
           <Row>
             <Column size="12 sm-6">
-              <Link className="navbar-brand" to="/">Brian's site | page: {props.page}</Link>
+              <Link className="navbar-brand" to="/"><div className="logo_header"></div></Link>
             </Column>
             <Column size="12 sm-6">
-              <ul className="nav justify-content-center">
+              <ul className="nav justify-content-center" id="mainNav">
                 <li className="nav-item"><NavLink className="nav-link" to="work">work</NavLink></li>
                 <li className="nav-item"><NavLink className="nav-link" to="about">about</NavLink></li>
                 <li className="nav-item"><NavLink className="nav-link" to="contact">contact</NavLink></li>
