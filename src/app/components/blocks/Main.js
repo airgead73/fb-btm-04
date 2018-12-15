@@ -4,7 +4,7 @@ export default props => {
 
     return (
      
-          <main className={props.page}>{props.children}</main>
+          <main className={`main_${props.page}`}>{props.children}</main>
 
     );
 }

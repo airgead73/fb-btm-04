@@ -5,7 +5,7 @@ import { Container, Row, Column } from '../grid';
 
 export default props => {
     return (
-      <nav className={props.page}>
+      <nav className={`nav_${props.page}`}>
 
         <Container>
           <Row>

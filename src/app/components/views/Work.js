@@ -13,34 +13,58 @@ class Work extends Component {
       this.props.pageChange(this.props.path);
   }
     render() {
-  
+
+      const showSubNav = () => {
+        let currentPage = this.props.page;
+
+        switch(currentPage) {
+          case "sculpture":
+          case "figure":
+          case "abstract":
+          case "portrait":
+          case "wildlife":
+            return true;
+          default: 
+            return false;
+        }
+       
+      }
+
       return (
-        <div>
 
         <Row>
           <Column size="12 md-2">
 
           <h1>{this.props.page}</h1>
             
-            <nav>
-          
-              <NavLink to="all">all</NavLink><br/>
-              <NavLink to="sculpture">sculpture</NavLink><br/> 
-                  <NavLink to="sculpture/figure">figures</NavLink><br/>
-                  <NavLink to="sculpture/portrait">portrait</NavLink><br/>      
-                  <NavLink to="sculpture/abstract">abstract</NavLink><br/>
-                  <NavLink to="sculpture/wildlife">wildlife</NavLink><br/>                    
-              <NavLink to="painting">painting</NavLink><br/>
-              <NavLink to="drawing">drawing</NavLink>
-          
+            <nav className="workNav">
+
+              <ul>
+                <li><NavLink to="all">all</NavLink></li>
+                <li><NavLink to="sculpture">sculpture</NavLink>
+                {showSubNav() && (
+                  <ul className="sculptureNav">
+                  <li><NavLink to="sculpture/figure">figures</NavLink></li>
+                  <li><NavLink to="sculpture/portrait">portrait</NavLink></li>
+                  <li><NavLink to="sculpture/abstract">abstract</NavLink></li>
+                  <li><NavLink to="sculpture/wildlife">wildlife</NavLink></li>
+                </ul> 
+                )}
+            
+
+                </li>
+                <li><NavLink to="painting">painting</NavLink></li>
+                <li><NavLink to="drawing">drawing</NavLink></li>
+              </ul>
+       
           </nav>
+
           </Column>
           <Column size="12 md-10">
             {this.props.children}
           </Column>
         </Row>          
-       
-        </div>
+      
       );
     }
   }

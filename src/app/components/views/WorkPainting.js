@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import BMGallery from '../gallery/BMGallery';
+import db from '../../../db/getDB';
 
 class WorkPainting extends Component {
     componentDidMount() {
@@ -11,7 +12,7 @@ class WorkPainting extends Component {
   
       return (
 
-        <p>painting page</p> 
+        <BMGallery photos={db(this.props.path)} direction={"rows"}/>
 
       );
     }

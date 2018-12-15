@@ -12,7 +12,6 @@ class SculptureHome extends Component {
       
         
          <div>
-           <p>------------</p>
             {this.props.children}
          </div> 
           
