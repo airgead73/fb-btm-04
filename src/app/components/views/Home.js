@@ -11,7 +11,6 @@ class Home extends Component {
       return (
         <div>
           <h2>{this.props.title}</h2>
-          <p>03_versionA Branch</p>
         </div>
       );
     }
