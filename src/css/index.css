@@ -71,18 +71,6 @@ header {
 a#currentLink {
   text-decoration: underline; }
 
-nav.nav_home #mainNav {
-  position: absolute;
-  top: 300px;
-  background-color: RGBA(0, 0, 0, 0.5);
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%; }
-
-#mainNav a {
-  color: white; }
-
 /*
 ////////////////////////////
 ////// MAIN ////////////////
@@ -97,18 +85,24 @@ nav.nav_home #mainNav {
 h1.home_title {
   display: none; }
 
-nav.nav_home .logo_header {
-  display: block;
-  height: 50px;
-  width: 280px;
-  margin-left: auto;
-  margin-right: auto;
+#logo_column {
   background-image: url("../images/logo_sm.png");
-  background-size: cover; }
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center; }
+  #logo_column .navbar-brand {
+    width: 100%;
+    padding-top: 18.18%; }
 
-footer.footer_home {
+.nav_home a {
   color: white; }
-  footer.footer_home a {
+  .nav_home a:hover {
+    color: white; }
+
+.footer_home {
+  color: white; }
+  .footer_home a {
     color: white; }
 
 /*

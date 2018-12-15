@@ -1,7 +1,7 @@
 import React from 'react';
 import NavLink from './NavLink';
 import { Link } from '@reach/router';
-import { Container, Row, Column } from '../grid';
+import { Container, Row, Column, CustomColumn } from '../grid';
 
 export default props => {
     return (
@@ -9,9 +9,9 @@ export default props => {
 
         <Container>
           <Row>
-            <Column size="12 sm-6">
-              <Link className="navbar-brand" to="/"><div className="logo_header"></div></Link>
-            </Column>
+            <CustomColumn size="12 sm-6" id="logo_column">
+              <Link className="navbar-brand" to="/"></Link>
+            </CustomColumn>
             <Column size="12 sm-6">
               <ul className="nav justify-content-center" id="mainNav">
                 <li className="nav-item"><NavLink className="nav-link" to="work">work</NavLink></li>
