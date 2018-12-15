@@ -4,7 +4,7 @@ import Nav from '../navigation/Nav';
 class Header extends Component {
     render() {
         return (
-            <header>
+            <header id="pageTop">
                 <Nav page={this.props.page}/>
             </header>
         );

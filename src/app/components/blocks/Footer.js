@@ -4,7 +4,7 @@ import NavFooter from '../navigation/NavFooter';
 class Footer extends Component {
     render() {
         return (
-            <footer>
+            <footer className={`footer_${this.props.page}`}>
                 <NavFooter page={this.props.page}/>                
             </footer>
         );

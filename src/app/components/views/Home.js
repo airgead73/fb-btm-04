@@ -4,7 +4,7 @@ class Home extends Component {
     componentDidMount() {
       document.body.setAttribute("id", this.props.id);
       document.title = this.props.title;
-      this.props.pageChange(this.props.className);
+      this.props.pageChange("home");
     }
     render() {
   

@@ -41,7 +41,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      page: "app"
+      page: "landing"
     };
     this.changePage = this.changePage.bind(this);
   }
@@ -51,6 +51,7 @@ class App extends Component {
       page: newPage
     });
   }
+
 
   render() {
     return (
@@ -62,8 +63,10 @@ class App extends Component {
         <Router>
             <Home 
               path="/" 
+              page={this.state.page}
               pageChange={this.changePage}
-              title="brian moneypenny"             
+              title="brian moneypenny" 
+              id="pageHome"            
     
               />
             <Work 
@@ -71,53 +74,62 @@ class App extends Component {
               page={this.state.page} 
               pageChange={this.changePage}
               title="brian's work"
+              id="pageWork"
               >
                 <WorkHome 
                   path="/" 
                   page={this.state.page} 
                   pageChange={this.changePage}
                   title="brian's work"
+                  id="pageWork"
                   />
                 <All 
                   path="all" 
                   page={this.state.page} 
                   pageChange={this.changePage}
                   title="brian's work | all"
+                  id="pageAll"
                   />
                 <Sculpture
                   path="sculpture" 
                   page={this.state.page} 
                   pageChange={this.changePage}
                   title="brian's work | sculpture"
+                  id="pageSculpture"
                   >
                     <SculptureHome
                       path="/"
                       page={this.state.page}
                       pageChange={this.changePage}
-                      title="brian's work | sculpture"               
+                      title="brian's work | sculpture"
+                      id="pageSculpture"               
                     />
                     <Figures
                       path="figure"
                       page={this.state.page}
                       pageChange={this.changePage}
-                      title="sculpture | figures"                   
+                      title="sculpture | figures" 
+                      id="pageFigures"                  
                     />
                     <Portrait
                        path="portrait"
                        page={this.state.page}
-                       pageChange={this.changePage}                    
+                       pageChange={this.changePage} 
+                       id="pagePortrait"                   
                     />
                     <Wildlife
                       path="wildlife"
                       page={this.state.page}
                       pageChange={this.changePage}
-                      title="sculpture | wildlife"                    
+                      title="sculpture | wildlife" 
+                      id="pageWildlife"                   
                     />
                     <Abstract
                        path="abstract"
                        page={this.state.page}
                        pageChange={this.changePage}
-                       title="sculpture | abstract"              
+                       title="sculpture | abstract" 
+                       id="pageAbstract"             
                     />
                   </Sculpture>
                 <Painting 
@@ -125,12 +137,14 @@ class App extends Component {
                   page={this.state.page} 
                   pageChange={this.changePage}
                   title="brian's work | painting"
+                  id="pagePainting"
                   />
                 <Drawing 
                 path="drawing" 
                 page={this.state.page} 
                 pageChange={this.changePage}
                 title="brian's work | drawing"
+                id="pageDrawing"
                 />
             </Work>
             <About 
@@ -142,17 +156,20 @@ class App extends Component {
               path="contact" 
               pageChange={this.changePage}
               title="contact brian"
+              id="pageContact"
 
               />
             <Terms 
               path="terms" 
               pageChange={this.changePage}
               title="terms and conditions"
+              id="pageTerms"
               />
             <Credits 
               path="credits" 
               pageChange={this.changePage}
               title="credits"
+              id="pageCredits"
               />                  
           </Router>
         </Container>
