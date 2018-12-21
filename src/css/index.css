@@ -25,9 +25,6 @@ body {
 ////// LINKS & BTNS ////////
 ////////////////////////////
  */
-a.btt_home {
-  display: none; }
-
 /*
 ////////////////////////////
 ////// LISTS //////////////
@@ -71,6 +68,123 @@ header {
 a#currentLink {
   text-decoration: underline; }
 
+#logo_column {
+  position: relative;
+  top: -30px;
+  background-image: url("../images/logo_rec.svg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center; }
+  #logo_column .navbar-brand {
+    width: 100%;
+    padding-top: 18.18%; }
+
+.nav_home a {
+  color: white; }
+  .nav_home a:hover {
+    color: white; }
+
+.nav_home #mainNav {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 20%;
+  background-color: RGBA(0, 0, 0, 0.25); }
+
+.nav_work a,
+.nav_about a,
+.nav_contact a,
+.nav_terms a,
+.nav_credits a,
+.nav_all a,
+.nav_sculpture a,
+.nav_figure a,
+.nav_portrait a,
+.nav_abstract a,
+.nav_wildlife a,
+.nav_painting a,
+.nav_drawing a {
+  color: gray; }
+
+.nav_work #mainNav,
+.nav_about #mainNav,
+.nav_contact #mainNav,
+.nav_terms #mainNav,
+.nav_credits #mainNav,
+.nav_all #mainNav,
+.nav_sculpture #mainNav,
+.nav_figure #mainNav,
+.nav_portrait #mainNav,
+.nav_abstract #mainNav,
+.nav_wildlife #mainNav,
+.nav_painting #mainNav,
+.nav_drawing #mainNav {
+  position: relative;
+  top: -30px; }
+
+/* Work Navigation */
+#workNav ul {
+  padding: 0;
+  margin: 0; }
+
+#workNav.workNav_work li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 50%;
+  padding-top: 50%;
+  display: inline-block;
+  position: relative; }
+  #workNav.workNav_work li a {
+    border: 1px dotted red;
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 2px;
+    right: 2px;
+    color: white; }
+    #workNav.workNav_work li a:hover {
+      text-decoration: none; }
+      #workNav.workNav_work li a:hover span {
+        opacity: 1; }
+
+#workNav.workNav_work .list-sculpture a {
+  background-image: url("https://res.cloudinary.com/dpm/image/upload/v1532885000/bmoneypenny/work/bm-28.jpg");
+  background-size: cover; }
+
+#workNav.workNav_work .list-all a {
+  background-image: url("https://res.cloudinary.com/dpm/image/upload/v1532885000/bmoneypenny/work/bm-58.jpg");
+  background-size: cover;
+  background-size: 200%;
+  background-position-x: center;
+  background-position-y: 8%; }
+
+#workNav.workNav_work .list-painting a {
+  background-image: url("https://res.cloudinary.com/dpm/image/upload/v1532885000/bmoneypenny/work/bm-47.jpg");
+  background-size: 200%;
+  background-position-x: center;
+  background-position-y: 8%; }
+
+#workNav.workNav_work .list-drawing a {
+  background-image: url("https://res.cloudinary.com/dpm/image/upload/v1532885000/bmoneypenny/work/bm-41.jpg");
+  background-size: 200%;
+  background-position-x: center;
+  background-position-y: 20%; }
+
+#workNav.workNav_work span {
+  background-color: RGBA(0, 0, 0, 0.4);
+  width: 100%;
+  display: block;
+  text-align: center;
+  position: relative;
+  top: 65%;
+  padding: 8px 3px;
+  opacity: 1;
+  -webkit-transition: .35s;
+  transition: .35s; }
+
 /*
 ////////////////////////////
 ////// MAIN ////////////////
@@ -85,30 +199,8 @@ a#currentLink {
 h1.home_title {
   display: none; }
 
-#logo_column {
-  position: relative;
-  top: -30px;
-  background-image: url("../images/logo_rec.svg");
-  background-size: 100% auto;
-  background-repeat: no-repeat;
-  background-position-x: center;
-  background-position-y: center; }
-  #logo_column .navbar-brand {
-    width: 100%;
-    padding-top: 18.18%; }
-
-.nav_home a {
-  color: white; }
-  .nav_home a:hover {
-    color: white; }
-
-.footer_home {
-  color: white; }
-  .footer_home a {
-    color: white; }
-
-#mainNav {
-  background-color: RGBA(0, 0, 0, 0.5); }
+.main_work h1 {
+  display: none; }
 
 /*
 ////////////////////////////
@@ -123,6 +215,11 @@ footer {
   line-height: 50px;
   font-size: 12px;
   text-align: center; }
+
+.footer_home {
+  color: white; }
+  .footer_home a {
+    color: white; }
 
 /*
 ////////////////////////////

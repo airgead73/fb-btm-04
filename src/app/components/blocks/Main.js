@@ -6,7 +6,11 @@ export default props => {
      
           <main className={`main_${props.page}`}>
                 {props.children}
-                <a className={`btt_${props.page}`} href="#pageTop">back to top</a>
+                {
+                    (props.page !== "home" && props.page !== "work" )&& (
+                    <a className={`btt_${props.page}`} href="#pageTop">back to top</a>
+                )}
+                
             </main>
 
     );
