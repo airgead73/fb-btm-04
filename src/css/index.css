@@ -86,7 +86,9 @@ h1.home_title {
   display: none; }
 
 #logo_column {
-  background-image: url("../images/logo_sm.png");
+  position: relative;
+  top: -30px;
+  background-image: url("../images/logo_rec.svg");
   background-size: 100% auto;
   background-repeat: no-repeat;
   background-position-x: center;
@@ -104,6 +106,9 @@ h1.home_title {
   color: white; }
   .footer_home a {
     color: white; }
+
+#mainNav {
+  background-color: RGBA(0, 0, 0, 0.5); }
 
 /*
 ////////////////////////////
