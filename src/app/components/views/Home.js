@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Column, Row } from '../grid';
+import { CustomColumn, Row } from '../grid';
 
 class Home extends Component {
     componentDidMount() {
@@ -11,9 +11,9 @@ class Home extends Component {
   
       return (
         <Row>
-          <Column size="12">
+          <CustomColumn size="12" id="homeLogo">
             <h1 className="home_title">{this.props.title}</h1>
-          </Column>
+          </CustomColumn>
         </Row>
 
       );

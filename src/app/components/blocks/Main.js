@@ -11,6 +11,7 @@ export default props => {
           case "work":
           case "contact":
           case "credits":
+          case "sculpture":
             return false;
           default: 
             return true;
