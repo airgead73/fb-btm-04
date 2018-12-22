@@ -24,7 +24,7 @@ export default props => {
                 {props.children}
                 {
                     showBTT() && (
-                    <a className={`btt_${props.page}`} href="#pageTop">back to top</a>
+                    <a className={`btt_${props.page}`} href="#pageTop" id="bttLink">back to top</a>
                 )}
                 
             </main>

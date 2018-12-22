@@ -263,6 +263,15 @@ h1.home_title {
   .main_wildlife h1 {
     display: none; }
 
+/* back-to-top link */
+#bttLink {
+  display: block;
+  text-align: center;
+  margin-top: 30px;
+  padding-bottom: 30px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-style: italic; }
+
 /*
 ////////////////////////////
 ////// FOOTER //////////////
