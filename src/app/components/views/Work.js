@@ -45,17 +45,21 @@ class Work extends Component {
                 <li className="list-item list-painting"><NavLink to="painting"><span>painting</span></NavLink></li>
                 <li className="list-item list-drawing"><NavLink to="drawing"><span>drawing</span></NavLink></li>
               </ul>
+      
+          </nav>
 
-              {showSubNav() && (
-                  <ul className={`sculptureNav_${this.props.page}`} id="sculptureNav">
+          {showSubNav() && (
+            <nav className={`workSubNav_${this.props.page}`} id="workSubNav">
+                  <ul>
                     <li className="list-item list-figure"><NavLink to="sculpture/figure"><span>figures</span></NavLink></li>
                     <li className="list-item list-portrait"><NavLink to="sculpture/portrait"><span>portrait</span></NavLink></li>
                     <li className="list-item list-abstract"><NavLink to="sculpture/abstract"><span>abstract</span></NavLink></li>
                     <li className="list-item list-wildlife"><NavLink to="sculpture/wildlife"><span>wildlife</span></NavLink></li>
-                </ul> 
-              )}
-       
-          </nav>
+                </ul>             
+            </nav>
+          )}
+
+
 
           </Column>
           <Column size="12 md-10">

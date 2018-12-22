@@ -114,10 +114,12 @@ a#currentLink {
 .nav_wildlife #mainNav,
 .nav_painting #mainNav,
 .nav_drawing #mainNav {
-  position: relative; }
+  position: relative;
+  margin-top: 15px; }
 
 /* Work Navigation */
-#workNav ul {
+#workNav ul,
+#workSubNav ul {
   padding: 0;
   margin: 0; }
 
@@ -177,17 +179,52 @@ a#currentLink {
   -webkit-transition: .35s;
   transition: .35s; }
 
-#workNav.workNav_all {
+.workNav_all,
+.workNav_sculpture,
+.workNav_painting,
+.workNav_drawing,
+.workNav_figure,
+.workNav_portrait,
+.workNav_abstract,
+.workNav_wildlife {
   margin-bottom: 20px; }
-  #workNav.workNav_all li {
+  .workNav_all li,
+  .workNav_sculpture li,
+  .workNav_painting li,
+  .workNav_drawing li,
+  .workNav_figure li,
+  .workNav_portrait li,
+  .workNav_abstract li,
+  .workNav_wildlife li {
     list-style: none;
     padding: 0;
     margin: 0;
-    width: 50%;
+    width: 25%;
     display: inline-block;
     position: relative;
     text-align: center; }
-    #workNav.workNav_all li a {
+    .workNav_all li a,
+    .workNav_sculpture li a,
+    .workNav_painting li a,
+    .workNav_drawing li a,
+    .workNav_figure li a,
+    .workNav_portrait li a,
+    .workNav_abstract li a,
+    .workNav_wildlife li a {
+      display: block;
+      padding: 5px 0; }
+
+#workSubNav {
+  margin-bottom: 20px; }
+  #workSubNav li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 25%;
+    display: inline-block;
+    position: relative;
+    text-align: center; }
+    #workSubNav li a {
       display: block;
       padding: 5px 0; }
 
@@ -209,13 +246,21 @@ h1.home_title {
 .main_all,
 .main_sculpture,
 .main_drawing,
-.main_painting {
+.main_painting,
+.main_figure,
+.main_portrait,
+.main_abstract,
+.main_wildlife {
   padding-top: 25px; }
   .main_work h1,
   .main_all h1,
   .main_sculpture h1,
   .main_drawing h1,
-  .main_painting h1 {
+  .main_painting h1,
+  .main_figure h1,
+  .main_portrait h1,
+  .main_abstract h1,
+  .main_wildlife h1 {
     display: none; }
 
 /*

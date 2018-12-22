@@ -733,15 +733,6 @@ const works = [
       height: 1903
     },
     {
-      key: 'bm79',
-      form: 'drawing',
-      src: `${stem.base}${stem.watermark}${stem.folder}bm-79.jpg`,
-      alt: 'Four Drawings 079',
-      caption: 'Four Drawings 079',
-      width: 1845,
-      height: 1654
-    },
-    {
       key: 'bm80',
       form: 'sculpture',
       category: 'figure',
