@@ -55,11 +55,6 @@ body {
 ////// HEADER //////////////
 ////////////////////////////
  */
-header {
-  margin-bottom: 25px;
-  padding-top: 25px;
-  padding-bottom: 25px; }
-
 /*
 ////////////////////////////
 ////// NAV /////////////////
@@ -70,9 +65,8 @@ a#currentLink {
 
 #logo_column {
   position: relative;
-  top: -30px;
   background-image: url("../images/logo_rec.svg");
-  background-size: 100% 100%;
+  background-size: auto 90%;
   background-repeat: no-repeat;
   background-position-x: center;
   background-position-y: center; }
@@ -120,8 +114,7 @@ a#currentLink {
 .nav_wildlife #mainNav,
 .nav_painting #mainNav,
 .nav_drawing #mainNav {
-  position: relative;
-  top: -30px; }
+  position: relative; }
 
 /* Work Navigation */
 #workNav ul {
@@ -137,7 +130,6 @@ a#currentLink {
   display: inline-block;
   position: relative; }
   #workNav.workNav_work li a {
-    border: 1px dotted red;
     display: block;
     position: absolute;
     top: 0;
@@ -185,6 +177,20 @@ a#currentLink {
   -webkit-transition: .35s;
   transition: .35s; }
 
+#workNav.workNav_all {
+  margin-bottom: 20px; }
+  #workNav.workNav_all li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 50%;
+    display: inline-block;
+    position: relative;
+    text-align: center; }
+    #workNav.workNav_all li a {
+      display: block;
+      padding: 5px 0; }
+
 /*
 ////////////////////////////
 ////// MAIN ////////////////
@@ -199,8 +205,18 @@ a#currentLink {
 h1.home_title {
   display: none; }
 
-.main_work h1 {
-  display: none; }
+.main_work,
+.main_all,
+.main_sculpture,
+.main_drawing,
+.main_painting {
+  padding-top: 25px; }
+  .main_work h1,
+  .main_all h1,
+  .main_sculpture h1,
+  .main_drawing h1,
+  .main_painting h1 {
+    display: none; }
 
 /*
 ////////////////////////////
