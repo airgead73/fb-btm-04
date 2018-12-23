@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { CustomColumn, Row } from '../grid';
+import Media from 'react-media';
 
 class Home extends Component {
     componentDidMount() {
@@ -12,7 +13,11 @@ class Home extends Component {
       return (
         <Row>
           <CustomColumn size="12" id="homeLogo">
-            <h1 className="home_title">{this.props.title}</h1>
+          
+            <Media 
+              query="(min-width: 576px)" 
+              render={() => <h1 className="home_title">{this.props.title}</h1>}
+            />
           </CustomColumn>
         </Row>
 

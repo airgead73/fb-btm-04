@@ -240,7 +240,19 @@ a#currentLink {
   background-size: cover; }
 
 h1.home_title {
-  display: none; }
+  display: block;
+  font-size: 8px;
+  color: RGBA(0, 0, 0, 0);
+  width: 275px;
+  padding-top: 50%;
+  background-image: url("../images/logo_sq_bg.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+  position: fixed;
+  right: 10%;
+  top: 15%; }
 
 .main_work,
 .main_all,
@@ -327,3 +339,22 @@ footer {
   #pageHome {
     background-image: url("../images/bg-1.jpg");
     background-position-x: 30%; } }
+
+@media (min-width: 768px) {
+  h1.home_title {
+    width: 350px; } }
+
+@media (min-width: 992px) {
+  h1.home_title {
+    right: 20%;
+    top: 10%; } }
+
+@media (min-width: 1140px) {
+  h1.home_title {
+    width: 400px;
+    right: 28%;
+    top: -8%; } }
+
+@media (min-width: 2000px) {
+  h1.home_title {
+    right: 35%; } }
