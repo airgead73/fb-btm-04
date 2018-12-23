@@ -114,8 +114,7 @@ a#currentLink {
 .nav_wildlife #mainNav,
 .nav_painting #mainNav,
 .nav_drawing #mainNav {
-  position: relative;
-  margin-top: 15px; }
+  position: relative; }
 
 /* Work Navigation */
 #workNav ul,
@@ -131,18 +130,19 @@ a#currentLink {
   padding-top: 50%;
   display: inline-block;
   position: relative; }
-  #workNav.workNav_work li a {
-    display: block;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 2px;
-    right: 2px;
-    color: white; }
-    #workNav.workNav_work li a:hover {
-      text-decoration: none; }
-      #workNav.workNav_work li a:hover span {
-        opacity: 1; }
+
+#workNav.workNav_work a {
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 2px;
+  right: 2px;
+  color: white; }
+  #workNav.workNav_work a:hover {
+    text-decoration: none; }
+    #workNav.workNav_work a:hover span {
+      opacity: 1; }
 
 #workNav.workNav_work .list-sculpture a {
   background-image: url("https://res.cloudinary.com/dpm/image/upload/v1532885000/bmoneypenny/work/bm-28.jpg");
@@ -322,9 +322,8 @@ footer {
     -webkit-box-pack: end !important;
         -ms-flex-pack: end !important;
             justify-content: flex-end !important; }
-  /* main nav home */
   #logo_column {
-    background-image: url("../images/logo_sq_bw.png");
+    background-image: url("../images/logo_sq_dark.svg");
     background-size: auto 40px;
     background-position-x: left; }
   #mainNav {
@@ -338,11 +337,26 @@ footer {
   /* page home */
   #pageHome {
     background-image: url("../images/bg-1.jpg");
-    background-position-x: 30%; } }
+    background-position-x: 30%; }
+    #pageHome #logo_column {
+      background-image: url("../images/logo_sq_light.svg"); } }
 
 @media (min-width: 768px) {
   h1.home_title {
-    width: 350px; } }
+    width: 350px; }
+  #mainNav {
+    margin-top: 30px; }
+  /* work nav */
+  #workNav.workNav_work {
+    width: 75%;
+    margin: 40px auto 0 auto; }
+    #workNav.workNav_work a span {
+      opacity: 0;
+      -webkit-transition: .35s;
+      transition: .35s;
+      font-size: 40px; }
+    #workNav.workNav_work a:hover span {
+      opacity: 1; } }
 
 @media (min-width: 992px) {
   h1.home_title {

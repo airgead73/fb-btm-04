@@ -62,7 +62,7 @@ class Work extends Component {
 
 
           </Column>
-          <Column size="12 md-10">
+          <Column size="12">
             {this.props.children}
           </Column>
         </Row>          
