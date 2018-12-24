@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Row, Column } from '../grid';
+import { FaInstagram, FaFacebookSquare, FaEnvelopeSquare } from 'react-icons/fa';
 
 class Contact extends Component {
     componentDidMount() {
@@ -18,9 +19,7 @@ class Contact extends Component {
           <Column size="12 sm-6">
           <h1>{this.props.title}</h1>
 
-            <p>Seaside, CA</p>
-
-       
+            <h5>Seaside, CA <br/><FaInstagram/> <FaFacebookSquare/> <FaEnvelopeSquare/></h5>
 
           </Column>
         </Row>
