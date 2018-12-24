@@ -345,18 +345,15 @@ footer {
   h1.home_title {
     width: 350px; }
   #mainNav {
-    margin-top: 30px; }
+    margin-top: 15px; }
   /* work nav */
   #workNav.workNav_work {
     width: 75%;
     margin: 40px auto 0 auto; }
-    #workNav.workNav_work a span {
-      opacity: 0;
-      -webkit-transition: .35s;
-      transition: .35s;
-      font-size: 40px; }
-    #workNav.workNav_work a:hover span {
-      opacity: 1; } }
+    #workNav.workNav_work .list-painting a {
+      background-size: 145%; }
+    #workNav.workNav_work .list-drawing a {
+      background-size: 180%; } }
 
 @media (min-width: 992px) {
   h1.home_title {
@@ -367,7 +364,15 @@ footer {
   h1.home_title {
     width: 400px;
     right: 28%;
-    top: -8%; } }
+    top: -8%; }
+  /* work nav */
+  #workNav.workNav_work a span {
+    opacity: 0;
+    -webkit-transition: .35s;
+    transition: .35s;
+    font-size: 40px; }
+  #workNav.workNav_work a:hover span {
+    opacity: 1; } }
 
 @media (min-width: 2000px) {
   h1.home_title {

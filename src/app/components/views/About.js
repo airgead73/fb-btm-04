@@ -11,11 +11,11 @@ class About extends Component {
   
       return (
         <Row>
-          <Column size="12 sm-6">
+          <Column size="12 xl-6">
           <img className="img-fluid" alt="brian" src="https://res.cloudinary.com/dpm/image/upload/v1532885001/bmoneypenny/bio/bm-49.jpg"/>
 
           </Column>
-          <Column size="12 sm-6">
+          <Column size="12 xl-6">
           <h1>{this.props.title}</h1>
 
             <p>I have been working the world of sculpture since graduating from Lyme
