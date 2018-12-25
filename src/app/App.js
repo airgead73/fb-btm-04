@@ -121,7 +121,7 @@ class App extends Component {
 
   render() {
     return (
-      <Container>
+      <Container fluid="fluid">
         <CustomRow id="primaryRow">
           <CustomColumn size="12 sm-3" id="columnLeft">
             <Header page={this.state.page}/>            
