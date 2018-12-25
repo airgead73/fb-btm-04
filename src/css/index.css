@@ -179,6 +179,63 @@ a#currentLink {
   -webkit-transition: .35s;
   transition: .35s; }
 
+#workSubNav.workSubNav_sculpture li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 50%;
+  padding-top: 50%;
+  display: inline-block;
+  position: relative; }
+
+#workSubNav.workSubNav_sculpture a {
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 2px;
+  right: 2px;
+  color: white; }
+  #workSubNav.workSubNav_sculpture a:hover {
+    text-decoration: none; }
+    #workSubNav.workSubNav_sculpture a:hover span {
+      opacity: 1; }
+
+#workSubNav.workSubNav_sculpture .list-figure a {
+  background-image: url("https://res.cloudinary.com/dpm/image/upload/v1532885000/bmoneypenny/work/bm-20.jpg");
+  background-size: cover; }
+
+#workSubNav.workSubNav_sculpture .list-portrait a {
+  background-image: url("https://res.cloudinary.com/dpm/image/upload/v1532885000/bmoneypenny/work/bm-24.jpg");
+  background-size: cover;
+  background-size: 200%;
+  background-position-x: center;
+  background-position-y: 20%; }
+
+#workSubNav.workSubNav_sculpture .list-abstract a {
+  background-image: url("https://res.cloudinary.com/dpm/image/upload/v1532885000/bmoneypenny/work/bm-61.jpg");
+  background-size: 200%;
+  background-position-x: center;
+  background-position-y: 8%; }
+
+#workSubNav.workSubNav_sculpture .list-wildlife a {
+  background-image: url("https://res.cloudinary.com/dpm/image/upload/v1532885000/bmoneypenny/work/bm-13.jpg");
+  background-size: 200%;
+  background-position-x: center;
+  background-position-y: 20%; }
+
+#workSubNav.workSubNav_sculpture span {
+  background-color: RGBA(0, 0, 0, 0.4);
+  width: 100%;
+  display: block;
+  text-align: center;
+  position: relative;
+  top: 65%;
+  padding: 8px 3px;
+  opacity: 1;
+  -webkit-transition: .35s;
+  transition: .35s; }
+
 .workNav_all,
 .workNav_sculpture,
 .workNav_painting,
