@@ -60,11 +60,27 @@ body {
 ////// NAV /////////////////
 ////////////////////////////
  */
+.nav-link {
+  padding: 0; }
+
+#mainNav li {
+  text-align: center;
+  font-size: 24px; }
+
+#workNav li {
+  font-size: 20px; }
+
+#workSubNav li {
+  font-size: 16px; }
+
 /*
 ////////////////////////////
 ////// MAIN ////////////////
 ////////////////////////////
  */
+#columnLeft {
+  background-color: lightgray; }
+
 /*
 ////////////////////////////
 ////// FOOTER //////////////

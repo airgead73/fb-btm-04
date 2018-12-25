@@ -9,19 +9,19 @@ export default props => {
 
         <Container>
           <Row>
-            <CustomColumn size="12 sm-6" id="logo_column">
+            <CustomColumn size="12" id="logo_column">
               <Link className="navbar-brand" to="/">Brian's Site</Link>
             </CustomColumn>
-            <Column size="12 sm-6">
-              <ul className="nav" id="mainNav">
+            <Column size="12">
+              <ul className="nav flex-column" id="mainNav">
                 <li className="nav-item"><NavLink className="nav-link" to="work">work</NavLink>
-                    <ul className="nav" id="workNav">
+                    <ul className="nav flex-column" id="workNav">
                     <li className="list-item list-sculpture"><NavLink to="sculpture"><span>sculpture</span></NavLink>
-                      <ul className="nav" id="workSubNav">
-                        <li className="list-item list-figure"><NavLink to="sculpture/figure"><span>figures</span></NavLink></li>
-                        <li className="list-item list-portrait"><NavLink to="sculpture/portrait"><span>portrait</span></NavLink></li>
-                        <li className="list-item list-abstract"><NavLink to="sculpture/abstract"><span>abstract</span></NavLink></li>
-                        <li className="list-item list-wildlife"><NavLink to="sculpture/wildlife"><span>wildlife</span></NavLink></li>
+                      <ul className="nav flex-column" id="workSubNav">
+                        <li className="list-item list-figure"><NavLink to="figure"><span>figures</span></NavLink></li>
+                        <li className="list-item list-portrait"><NavLink to="portrait"><span>portrait</span></NavLink></li>
+                        <li className="list-item list-abstract"><NavLink to="abstract"><span>abstract</span></NavLink></li>
+                        <li className="list-item list-wildlife"><NavLink to="wildlife"><span>wildlife</span></NavLink></li>
                       </ul>                   
                     </li>
                     <li className="list-item list-painting"><NavLink to="painting"><span>painting</span></NavLink></li>
