@@ -3,7 +3,7 @@ import { Router } from '@reach/router';
 
 // grid
 
-import { Container } from './components/grid';
+import { Container, CustomRow, CustomColumn } from './components/grid';
 
 // blocks
 
@@ -55,130 +55,125 @@ class App extends Component {
 
   render() {
     return (
-      <div>
-        
-        <Header page={this.state.page}/>
-        <Main page={this.state.page}>
-        <Container>
-        <Router>
-            <Home 
-              path="/" 
-              page={this.state.page}
-              pageChange={this.changePage}
-              title="brian moneypenny" 
-              id="pageHome"            
-    
-              />
-            <Work 
-              path="work" 
-              page={this.state.page} 
-              pageChange={this.changePage}
-              title="brian's work"
-              id="pageWork"
-              >
-                <WorkHome 
+      <Container>
+        <CustomRow id="primaryRow">
+          <CustomColumn size="12" id="columnLeft">
+            <Header page={this.state.page}/>
+            
+          </CustomColumn>
+          <CustomColumn size="12" id="columnRight">
+          <Main page={this.state.page}>        
+            <Router>
+                <Home 
                   path="/" 
+                  page={this.state.page}
+                  pageChange={this.changePage}
+                  title="brian moneypenny" 
+                  id="pageHome"          
+        
+                  />
+                <Work 
+                  path="work" 
                   page={this.state.page} 
                   pageChange={this.changePage}
                   title="brian's work"
                   id="pageWork"
-                  />
-                <All 
-                  path="all" 
-                  page={this.state.page} 
-                  pageChange={this.changePage}
-                  title="brian's work | all"
-                  id="pageAll"
-                  />
-                <Sculpture
-                  path="sculpture" 
-                  page={this.state.page} 
-                  pageChange={this.changePage}
-                  title="brian's work | sculpture"
-                  id="pageSculpture"
                   >
-                    <SculptureHome
-                      path="/"
-                      page={this.state.page}
+                    <WorkHome 
+                      path="/" 
+                      page={this.state.page} 
+                      pageChange={this.changePage}
+                      title="brian's work"
+                      id="pageWork"
+                      />
+                    <Sculpture
+                      path="sculpture" 
+                      page={this.state.page} 
                       pageChange={this.changePage}
                       title="brian's work | sculpture"
-                      id="pageSculpture"               
-                    />
-                    <Figures
-                      path="figure"
-                      page={this.state.page}
+                      id="pageSculpture"
+                      >
+                        <SculptureHome
+                          path="/"
+                          page={this.state.page}
+                          pageChange={this.changePage}
+                          title="brian's work | sculpture"
+                          id="pageSculpture"               
+                        />
+                        <Figures
+                          path="figure"
+                          page={this.state.page}
+                          pageChange={this.changePage}
+                          title="sculpture | figures" 
+                          id="pageFigures"                  
+                        />
+                        <Portrait
+                          path="portrait"
+                          page={this.state.page}
+                          pageChange={this.changePage} 
+                          id="pagePortrait"                   
+                        />
+                        <Wildlife
+                          path="wildlife"
+                          page={this.state.page}
+                          pageChange={this.changePage}
+                          title="sculpture | wildlife" 
+                          id="pageWildlife"                   
+                        />
+                        <Abstract
+                          path="abstract"
+                          page={this.state.page}
+                          pageChange={this.changePage}
+                          title="sculpture | abstract" 
+                          id="pageAbstract"             
+                        />
+                      </Sculpture>
+                    <Painting 
+                      path="painting" 
+                      page={this.state.page} 
                       pageChange={this.changePage}
-                      title="sculpture | figures" 
-                      id="pageFigures"                  
+                      title="brian's work | painting"
+                      id="pagePainting"
+                      />
+                    <Drawing 
+                    path="drawing" 
+                    page={this.state.page} 
+                    pageChange={this.changePage}
+                    title="brian's work | drawing"
+                    id="pageDrawing"
                     />
-                    <Portrait
-                       path="portrait"
-                       page={this.state.page}
-                       pageChange={this.changePage} 
-                       id="pagePortrait"                   
-                    />
-                    <Wildlife
-                      path="wildlife"
-                      page={this.state.page}
-                      pageChange={this.changePage}
-                      title="sculpture | wildlife" 
-                      id="pageWildlife"                   
-                    />
-                    <Abstract
-                       path="abstract"
-                       page={this.state.page}
-                       pageChange={this.changePage}
-                       title="sculpture | abstract" 
-                       id="pageAbstract"             
-                    />
-                  </Sculpture>
-                <Painting 
-                  path="painting" 
-                  page={this.state.page} 
+                </Work>
+                <About 
+                  path="about" 
                   pageChange={this.changePage}
-                  title="brian's work | painting"
-                  id="pagePainting"
+                  title="about brian"
                   />
-                <Drawing 
-                path="drawing" 
-                page={this.state.page} 
-                pageChange={this.changePage}
-                title="brian's work | drawing"
-                id="pageDrawing"
-                />
-            </Work>
-            <About 
-              path="about" 
-              pageChange={this.changePage}
-              title="about brian"
-              />
-            <Contact 
-              path="contact" 
-              pageChange={this.changePage}
-              title="contact brian"
-              id="pageContact"
+                <Contact 
+                  path="contact" 
+                  pageChange={this.changePage}
+                  title="contact brian"
+                  id="pageContact"
 
-              />
-            <Terms 
-              path="terms" 
-              pageChange={this.changePage}
-              title="terms and conditions"
-              id="pageTerms"
-              />
-            <Credits 
-              path="credits" 
-              pageChange={this.changePage}
-              title="credits"
-              id="pageCredits"
-              />                  
-          </Router>
-        </Container>
+                  />
+                <Terms 
+                  path="terms" 
+                  pageChange={this.changePage}
+                  title="terms and conditions"
+                  id="pageTerms"
+                  />
+                <Credits 
+                  path="credits" 
+                  pageChange={this.changePage}
+                  title="credits"
+                  id="pageCredits"
+                  />                  
+              </Router>
 
-        </Main>
+            </Main>          
+          </CustomColumn>          
+        </CustomRow>
         <Footer page={this.state.page}/> 
-        
-      </div>
-
+      </Container>
     );
   }
 }

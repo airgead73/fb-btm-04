@@ -39,12 +39,7 @@ class Work extends Component {
             
             <nav className={`workNav_${this.props.page}`} id="workNav">
 
-              <ul>
-                <li className="list-item list-all"><NavLink to="all"><span>all</span></NavLink></li>
-                <li className="list-item list-sculpture"><NavLink to="sculpture"><span>sculpture</span></NavLink></li>
-                <li className="list-item list-painting"><NavLink to="painting"><span>painting</span></NavLink></li>
-                <li className="list-item list-drawing"><NavLink to="drawing"><span>drawing</span></NavLink></li>
-              </ul>
+
       
           </nav>
 
