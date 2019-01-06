@@ -15,28 +15,12 @@ import Main from './components/blocks/Main';
 
 // main views
 
-import Home from './components/views/Home';
 import About from './components/views/About';
-
-
-
-//import Work from './components/views/Work';
 import Contact from './components/views/Contact';
 import Terms from './components/views/Terms';
 import Credits from './components/views/Credits';
 
 // work views
-
-//import Sculpture from './components/views/WorkSculpture';
-//import Painting from './components/views/WorkPainting';
-//import Drawing from './components/views/WorkDrawing';
-
-// sculpture views 
-
-//import Abstract from './components/views/SculptureAbstract';
-//import Figures from './components/views/SculptureFigures';
-//import Portrait from './components/views/SculpturePortrait';
-//import Wildlife from './components/views/SculptureWildlife';
 
 const Work = (props) => {
   document.body.setAttribute("id", props.id);
@@ -128,16 +112,9 @@ class App extends Component {
           </CustomColumn>
           <CustomColumn size="12 sm-9" id="columnRight">
           <Main page={this.state.page}>        
-            <Router>
-                <Home 
-                  path="/" 
-                  page={this.state.page}
-                  pageChange={this.changePage}
-                  title="brian moneypenny" 
-                  id="pageHome" 
-                  />              
+            <Router>           
                 <Work 
-                  path="work" 
+                  path="/" 
                   page={this.state.page} 
                   pageChange={this.changePage}
                   title="brian's work"

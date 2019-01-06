@@ -10,11 +10,11 @@ export default props => {
         <Container>
           <Row>
             <CustomColumn size="12" id="logo_column">
-              <Link className="navbar-brand" to="/">Brian's Site</Link>
+              <Link className="navbar-brand" to="/"><div className="mainLogo"></div></Link>
             </CustomColumn>
             <Column size="12">
               <ul className="nav flex-column" id="mainNav">
-                <li className="nav-item"><NavLink className="nav-link" to="work">work</NavLink>
+                <li className="nav-item"><NavLink className="nav-link" to="/">work</NavLink>
                     <ul className="nav flex-column" id="workNav">
                     <li className="list-item list-sculpture"><NavLink to="sculpture"><span>sculpture</span></NavLink>
                       <ul className="nav flex-column" id="workSubNav">
@@ -30,7 +30,10 @@ export default props => {
                 </li>
                 <li className="nav-item"><NavLink className="nav-link" to="about">about</NavLink></li>
                 <li className="nav-item"><NavLink className="nav-link" to="contact">contact</NavLink></li>
-              </ul>        
+              </ul> 
+
+              
+                     
             </Column>
           </Row>
 
