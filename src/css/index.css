@@ -50,6 +50,20 @@ body {
 ////// GALLERY /////////////
 ////////////////////////////
  */
+#lightboxBackdrop [class^="footerCaption"] {
+  background-color: RGBA(140, 140, 140, 0.8);
+  text-align: center;
+  line-height: 2;
+  font-size: 16px;
+  width: 100%;
+  position: absolute;
+  top: 10px; }
+
+#lightboxBackdrop button[class^="close_"] {
+  position: fixed;
+  top: 5px;
+  right: 15px; }
+
 /*
 ////////////////////////////
 ////// HEADER //////////////

@@ -18,6 +18,7 @@ class BMGallery extends React.Component {
     this.setState({
       currentImage: obj.index,
       lightboxIsOpen: true,
+      showImageCount: false
     });
   }
   closeLightbox() {
@@ -49,7 +50,8 @@ class BMGallery extends React.Component {
           onClickPrev={this.gotoPrevious}
           onClickNext={this.gotoNext}
           currentImage={this.state.currentImage}
-          isOpen={this.state.lightboxIsOpen}
+          isOpen={this.state.lightboxIsOpen}    
+          showImageCount={this.state.showImageCount}      
         />
       </div>
     );
